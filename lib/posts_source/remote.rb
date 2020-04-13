@@ -1,7 +1,7 @@
 require 'medium_api'
 
 module PostsSource
-  class Medium
+  class Remote
     def initialize(username)
       @client = ::MediumAPI.new(username)
     end
