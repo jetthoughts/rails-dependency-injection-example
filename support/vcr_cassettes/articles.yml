@@ -1,0 +1,1180 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@jetthoughts
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Mon, 13 Apr 2020 14:00:07 GMT
+      Content-Type:
+      - application/json;charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - close
+      Set-Cookie:
+      - __cfduid=de42893234afc492321c473fbdf80fcc41586786407; expires=Wed, 13-May-20
+        14:00:07 GMT; path=/; domain=.rss2json.com; HttpOnly; SameSite=Lax
+      Vary:
+      - Accept-Encoding
+      Etag:
+      - W/"a4c4b83e13fa8d89e497315a6216bdf6aa8b9443"
+      Cache-Control:
+      - public, max-age=1800
+      Last-Modified:
+      - Mon, 13 Apr 2020 12:59:00 GMT
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - GET, POST, OPTIONS
+      Access-Control-Allow-Headers:
+      - DNT,X-CustomHeader,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Content-Range,Range
+      Access-Control-Expose-Headers:
+      - DNT,X-CustomHeader,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Content-Range,Range
+      Cf-Cache-Status:
+      - DYNAMIC
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 5835b628cabf8253-KBP
+    body:
+      encoding: ASCII-8BIT
+      string: '{"status":"ok","feed":{"url":"https://medium.com/feed/@jetthoughts","title":"Stories
+        by JetThoughts on Medium","link":"https://medium.com/@jetthoughts?source=rss-c55e7783810f------2","author":"","description":"Stories
+        by JetThoughts on Medium","image":"https://cdn-images-1.medium.com/fit/c/150/150/2*85Ey3MdzACMaMxTEiPf-Bg.jpeg"},"items":[{"title":"Things
+        that remote teams expect from the product owner","pubDate":"2020-04-07 20:27:53","link":"https://jtway.co/things-that-remote-teams-expect-from-the-product-owner-f253e429ba66?source=rss-c55e7783810f------2","guid":"https://medium.com/p/f253e429ba66","author":"JetThoughts","thumbnail":"https://cdn-images-1.medium.com/max/1000/0*2Yb3jr6lnlKQtoOJ","description":"<div
+        class=\"medium-feed-item\">\n<p class=\"medium-feed-image\"><a href=\"https://jtway.co/things-that-remote-teams-expect-from-the-product-owner-f253e429ba66?source=rss-c55e7783810f------2\"><img
+        src=\"https://cdn-images-1.medium.com/max/1000/0*2Yb3jr6lnlKQtoOJ\" width=\"1000\"></a></p>\n<p
+        class=\"medium-feed-snippet\">What is product owner responsible for?</p>\n<p
+        class=\"medium-feed-link\"><a href=\"https://jtway.co/things-that-remote-teams-expect-from-the-product-owner-f253e429ba66?source=rss-c55e7783810f------2\">Continue
+        reading on JTWay \u00bb</a></p>\n</div>","content":"<div class=\"medium-feed-item\">\n<p
+        class=\"medium-feed-image\"><a href=\"https://jtway.co/things-that-remote-teams-expect-from-the-product-owner-f253e429ba66?source=rss-c55e7783810f------2\"><img
+        src=\"https://cdn-images-1.medium.com/max/1000/0*2Yb3jr6lnlKQtoOJ\" width=\"1000\"></a></p>\n<p
+        class=\"medium-feed-snippet\">What is product owner responsible for?</p>\n<p
+        class=\"medium-feed-link\"><a href=\"https://jtway.co/things-that-remote-teams-expect-from-the-product-owner-f253e429ba66?source=rss-c55e7783810f------2\">Continue
+        reading on JTWay \u00bb</a></p>\n</div>","enclosure":{},"categories":["product-management","remote-working","startup","product-ownership","tips"]},{"title":"Collecting
+        JavaScript code coverage with Capybara in Ruby on Rails application","pubDate":"2020-04-06
+        06:23:32","link":"https://jtway.co/collecting-javascript-code-coverage-with-capybara-in-ruby-on-rails-application-d0cb83a86a90?source=rss-c55e7783810f------2","guid":"https://medium.com/p/d0cb83a86a90","author":"JetThoughts","thumbnail":"https://cdn-images-1.medium.com/max/659/1*KC_e_gImbYOacVnUJ4mWIA.png","description":"\n<blockquote>Having
+        JavaScript code covered by Capybara system tests, can we utilize them for
+        the code coverage collecting and get the aggregated result with the coverage
+        from the unit\u00a0tests?</blockquote>\n<figure><img alt=\"\" src=\"https://cdn-images-1.medium.com/max/659/1*KC_e_gImbYOacVnUJ4mWIA.png\"></figure><p>We
+        want to be sure that all code responsible for key user journey scenarios of
+        our app is covered with\u00a0tests.</p>\n<p>For example, there is a Ruby on
+        Rails application that uses <a href=\"https://github.com/rails/webpacker\">Webpacker</a>
+        and has JavaScript files that are covered by the system tests. <a href=\"https://github.com/teamcapybara/capybara\">Capybara</a>
+        is used as the system testing\u00a0tool.</p>\n<blockquote>How to get code
+        coverage combining the results of system and unit\u00a0tests?</blockquote>\n<h4>Inject
+        getting coverage for JavaScript code</h4>\n<p>For getting coverage of the
+        JavaScript code, we use <a href=\"https://github.com/webpack-contrib/istanbul-instrumenter-loader\">Istanbul
+        Instrumenter Loader</a>. It needs to be added as a dev dependency with the
+        package manager (<a href=\"https://github.com/webpack-contrib/istanbul-instrumenter-loader#install\">Link
+        to installation</a>).</p>\n<p>This instrumenter is already outdated, but <a
+        href=\"https://jestjs.io/\">Jest</a> is still using it to get coverage, and
+        we have not found any alternatives to work with Webpack directly.</p>\n<p>The
+        Istanbul Instrumenter Loader will be run on the Webpack compilation stage
+        for the <em>test</em> environment. So we placed it in the <em>webpack</em>\u00a0folder.</p>\n<a
+        href=\"https://medium.com/media/7d5a4dd75250a2595a7a469a86915293/href\">https://medium.com/media/7d5a4dd75250a2595a7a469a86915293/href</a><h4>Getting
+        coverage after testing in the\u00a0browser</h4>\n<p>After running the system
+        test, the browser stores the coverage value in the global variable <em>_coverage_</em><strong><em>.
+        </em></strong>We need to extract from the page and save\u00a0it.</p>\n<a href=\"https://medium.com/media/f80bf6e4f0cad89401e3d9aaa0494b3a/href\">https://medium.com/media/f80bf6e4f0cad89401e3d9aaa0494b3a/href</a><p>This
+        helper will store the coverage value from the <strong><em>_coverage_</em></strong>
+        variable into the JSON file. We need to call it after each system\u00a0test.</p>\n<h4>Aggregate
+        the coverage\u00a0values</h4>\n<p>For collecting the coverage results we will
+        use <a href=\"https://github.com/codecov/codecov-ruby\">Codecov</a>. It has
+        several arguments in his\u00a0favor:</p>\n<ul>\n<li>aggregate the coverage
+        results for different code parts (e.g. Ruby and JavaScript) in one\u00a0place.</li>\n<li>manage
+        the reports from the Istanbul Instrumenter Loader</li>\n<li>allow merging
+        the coverage reports from several\u00a0sources</li>\n</ul>\n<p>Here is the
+        example of a script that prepares the compilation with the Istanbul Instrumenter,
+        runs the system tests, aggregates the code coverage results and sends the
+        report to\u00a0Codecov:</p>\n<a href=\"https://medium.com/media/7e002600771a238a710db20467daa60e/href\">https://medium.com/media/7e002600771a238a710db20467daa60e/href</a><p>After
+        system tests\u00a0running,</p>\n<pre>bin/rails test:system</pre>\n<p>we\u2019ll
+        have a bunch of generated JSON files in the <em>e2e_coverage</em> folder containing
+        coverage reports for the JavaScript code. Each file corresponds to one\u00a0test.</p>\n<p>At
+        the next stage, they are merged into one JSON file. For this purpose, we use
+        <a href=\"https://github.com/istanbuljs/nyc\">nyc</a> (Istanbul\u2019s command
+        line interface).</p>\n<p>This is a more advanced tool for collecting coverage,
+        but it does not allow us to build a report because it does not work with Webpack
+        directly. We can take advantage of the useful property that it supports\u200a\u2014\u200athe
+        <a href=\"https://github.com/istanbuljs/nyc#what-about-nyc-merge\"><em>merge</em></a>\u00a0command.</p>\n<pre>npx
+        nyc merge ./e2e_coverage  coverage.json</pre>\n<p>Finally, the aggregated
+        report is sent to the Codecov with <em>e2e</em>\u00a0flag:</p>\n<pre>npx codecov
+        -f coverage.json -F e2e</pre>\n<p>And that\u2019s all\u200a\u2014\u200awe
+        just got the JavaScript coverage without writing any actual JavaScript tests.</p>\n<p><strong>Sergey
+        Sviridov </strong><em>is a Software Engineer at </em><a href=\"https://www.jetthoughts.com/\"><em>JetThoughts</em></a><em>.
+        Follow him on </em><a href=\"https://www.linkedin.com/in/sergey-sviridov-83007199/\">LinkedIn</a>
+        <em>or\u00a0</em><a href=\"https://github.com/SviridovSV\"><em>GitHub</em></a><em>.</em></p>\n<p><strong>Dmitry
+        Tsvetkov</strong> <em>is a Software Engineer at </em><a href=\"https://www.jetthoughts.com/\"><em>JetThoughts</em></a><em>.
+        Follow him on </em><a href=\"https://www.linkedin.com/in/dmitry-tsvetkov-a374095a/\">LinkedIn</a>
+        <em>or\u00a0</em><a href=\"https://github.com/vlaew\"><em>GitHub.</em></a></p>\n<blockquote>\n<em>If
+        you enjoyed this story, we recommend reading our </em><a href=\"https://jtway.co/latest\"><em>latest
+        tech stories</em></a><em> and </em><a href=\"https://jtway.co/trending\"><em>trending
+        tech\u00a0stories</em></a><em>.</em>\n</blockquote>\n<img src=\"https://medium.com/_/stat?event=post.clientViewed&amp;referrerSource=full_rss&amp;postId=d0cb83a86a90\"
+        width=\"1\" height=\"1\"><hr>\n<p><a href=\"https://jtway.co/collecting-javascript-code-coverage-with-capybara-in-ruby-on-rails-application-d0cb83a86a90\">Collecting
+        JavaScript code coverage with Capybara in Ruby on Rails application</a> was
+        originally published in <a href=\"https://jtway.co/\">JTWay</a> on Medium,
+        where people are continuing the conversation by highlighting and responding
+        to this story.</p>\n","content":"\n<blockquote>Having JavaScript code covered
+        by Capybara system tests, can we utilize them for the code coverage collecting
+        and get the aggregated result with the coverage from the unit\u00a0tests?</blockquote>\n<figure><img
+        alt=\"\" src=\"https://cdn-images-1.medium.com/max/659/1*KC_e_gImbYOacVnUJ4mWIA.png\"></figure><p>We
+        want to be sure that all code responsible for key user journey scenarios of
+        our app is covered with\u00a0tests.</p>\n<p>For example, there is a Ruby on
+        Rails application that uses <a href=\"https://github.com/rails/webpacker\">Webpacker</a>
+        and has JavaScript files that are covered by the system tests. <a href=\"https://github.com/teamcapybara/capybara\">Capybara</a>
+        is used as the system testing\u00a0tool.</p>\n<blockquote>How to get code
+        coverage combining the results of system and unit\u00a0tests?</blockquote>\n<h4>Inject
+        getting coverage for JavaScript code</h4>\n<p>For getting coverage of the
+        JavaScript code, we use <a href=\"https://github.com/webpack-contrib/istanbul-instrumenter-loader\">Istanbul
+        Instrumenter Loader</a>. It needs to be added as a dev dependency with the
+        package manager (<a href=\"https://github.com/webpack-contrib/istanbul-instrumenter-loader#install\">Link
+        to installation</a>).</p>\n<p>This instrumenter is already outdated, but <a
+        href=\"https://jestjs.io/\">Jest</a> is still using it to get coverage, and
+        we have not found any alternatives to work with Webpack directly.</p>\n<p>The
+        Istanbul Instrumenter Loader will be run on the Webpack compilation stage
+        for the <em>test</em> environment. So we placed it in the <em>webpack</em>\u00a0folder.</p>\n<a
+        href=\"https://medium.com/media/7d5a4dd75250a2595a7a469a86915293/href\">https://medium.com/media/7d5a4dd75250a2595a7a469a86915293/href</a><h4>Getting
+        coverage after testing in the\u00a0browser</h4>\n<p>After running the system
+        test, the browser stores the coverage value in the global variable <em>_coverage_</em><strong><em>.
+        </em></strong>We need to extract from the page and save\u00a0it.</p>\n<a href=\"https://medium.com/media/f80bf6e4f0cad89401e3d9aaa0494b3a/href\">https://medium.com/media/f80bf6e4f0cad89401e3d9aaa0494b3a/href</a><p>This
+        helper will store the coverage value from the <strong><em>_coverage_</em></strong>
+        variable into the JSON file. We need to call it after each system\u00a0test.</p>\n<h4>Aggregate
+        the coverage\u00a0values</h4>\n<p>For collecting the coverage results we will
+        use <a href=\"https://github.com/codecov/codecov-ruby\">Codecov</a>. It has
+        several arguments in his\u00a0favor:</p>\n<ul>\n<li>aggregate the coverage
+        results for different code parts (e.g. Ruby and JavaScript) in one\u00a0place.</li>\n<li>manage
+        the reports from the Istanbul Instrumenter Loader</li>\n<li>allow merging
+        the coverage reports from several\u00a0sources</li>\n</ul>\n<p>Here is the
+        example of a script that prepares the compilation with the Istanbul Instrumenter,
+        runs the system tests, aggregates the code coverage results and sends the
+        report to\u00a0Codecov:</p>\n<a href=\"https://medium.com/media/7e002600771a238a710db20467daa60e/href\">https://medium.com/media/7e002600771a238a710db20467daa60e/href</a><p>After
+        system tests\u00a0running,</p>\n<pre>bin/rails test:system</pre>\n<p>we\u2019ll
+        have a bunch of generated JSON files in the <em>e2e_coverage</em> folder containing
+        coverage reports for the JavaScript code. Each file corresponds to one\u00a0test.</p>\n<p>At
+        the next stage, they are merged into one JSON file. For this purpose, we use
+        <a href=\"https://github.com/istanbuljs/nyc\">nyc</a> (Istanbul\u2019s command
+        line interface).</p>\n<p>This is a more advanced tool for collecting coverage,
+        but it does not allow us to build a report because it does not work with Webpack
+        directly. We can take advantage of the useful property that it supports\u200a\u2014\u200athe
+        <a href=\"https://github.com/istanbuljs/nyc#what-about-nyc-merge\"><em>merge</em></a>\u00a0command.</p>\n<pre>npx
+        nyc merge ./e2e_coverage  coverage.json</pre>\n<p>Finally, the aggregated
+        report is sent to the Codecov with <em>e2e</em>\u00a0flag:</p>\n<pre>npx codecov
+        -f coverage.json -F e2e</pre>\n<p>And that\u2019s all\u200a\u2014\u200awe
+        just got the JavaScript coverage without writing any actual JavaScript tests.</p>\n<p><strong>Sergey
+        Sviridov </strong><em>is a Software Engineer at </em><a href=\"https://www.jetthoughts.com/\"><em>JetThoughts</em></a><em>.
+        Follow him on </em><a href=\"https://www.linkedin.com/in/sergey-sviridov-83007199/\">LinkedIn</a>
+        <em>or\u00a0</em><a href=\"https://github.com/SviridovSV\"><em>GitHub</em></a><em>.</em></p>\n<p><strong>Dmitry
+        Tsvetkov</strong> <em>is a Software Engineer at </em><a href=\"https://www.jetthoughts.com/\"><em>JetThoughts</em></a><em>.
+        Follow him on </em><a href=\"https://www.linkedin.com/in/dmitry-tsvetkov-a374095a/\">LinkedIn</a>
+        <em>or\u00a0</em><a href=\"https://github.com/vlaew\"><em>GitHub.</em></a></p>\n<blockquote>\n<em>If
+        you enjoyed this story, we recommend reading our </em><a href=\"https://jtway.co/latest\"><em>latest
+        tech stories</em></a><em> and </em><a href=\"https://jtway.co/trending\"><em>trending
+        tech\u00a0stories</em></a><em>.</em>\n</blockquote>\n<img src=\"https://medium.com/_/stat?event=post.clientViewed&amp;referrerSource=full_rss&amp;postId=d0cb83a86a90\"
+        width=\"1\" height=\"1\"><hr>\n<p><a href=\"https://jtway.co/collecting-javascript-code-coverage-with-capybara-in-ruby-on-rails-application-d0cb83a86a90\">Collecting
+        JavaScript code coverage with Capybara in Ruby on Rails application</a> was
+        originally published in <a href=\"https://jtway.co/\">JTWay</a> on Medium,
+        where people are continuing the conversation by highlighting and responding
+        to this story.</p>\n","enclosure":{},"categories":["testing","rails","capybara","ruby-on-rails","javascript"]},{"title":"React
+        Native Testing Options Overview","pubDate":"2020-02-21 15:52:59","link":"https://jtway.co/react-native-testing-options-overview-3b1d55e6e6f3?source=rss-c55e7783810f------2","guid":"https://medium.com/p/3b1d55e6e6f3","author":"JetThoughts","thumbnail":"https://cdn-images-1.medium.com/max/1024/0*x7YNZtBBiyYwpr3u","description":"\n<p>After
+        investigating 100 articles about testing React Native applications I detected
+        2 main methods of testing which helped me succeed and can definitely help\u00a0you.</p>\n<figure><img
+        alt=\"\" src=\"https://cdn-images-1.medium.com/max/1024/0*x7YNZtBBiyYwpr3u\"><figcaption>Photo
+        by <a href=\"https://unsplash.com/@arstyy?utm_source=medium&amp;utm_medium=referral\">Austin
+        Neill</a> on\u00a0<a href=\"https://unsplash.com/?utm_source=medium&amp;utm_medium=referral\">Unsplash</a></figcaption></figure><h3>Unit
+        testing</h3>\n<p>A lot of people use <a href=\"https://jestjs.io/docs/en/tutorial-react-native\">Jest</a>
+        with <a href=\"https://airbnb.io/enzyme/docs/guides/react-native.html\">Enzyme</a>
+        to make unit testing more confident and more easygoing. You can do snapshot
+        testing, test components, and assert functional staff.</p>\n<p>There is another
+        option called <a href=\"https://github.com/callstack/react-native-testing-library\">React
+        Native Testing Library</a> is a lightweight React Native testing utilities
+        helping you write better tests with less\u00a0effort.</p>\n<h3>Jest overview</h3>\n<p>More
+        than 500 companies use Jest in their tech stacks, including Airbnb<strong>,
+        </strong>Facebook<strong>, </strong>and Instagram.</p>\n<h4>Reasons why companies
+        use\u00a0Jest:</h4>\n<ul>\n<li>Open-source</li>\n<li>Mock by default makes
+        testing much\u00a0simpler</li>\n<li>Out of the box code\u00a0coverage</li>\n</ul>\n<h4>Common
+        Approach</h4>\n<p>Built on top of the Jasmine test framework, using natural
+        <em>expect(value).toBe(other)</em> assertions.</p>\n<h4>Mock by\u00a0Default</h4>\n<p>Automatically
+        mocks CommonJS modules returned by <em>require()</em> as a result most existing
+        code testable.</p>\n<h4>Short Feedback\u00a0Loop</h4>\n<p>DOM APIs are mocked.
+        Tests run in parallel via a Node.js command-line utility.</p>\n<h4>Russel
+        Werner, Lead Engineer at StackShare:</h4>\n<blockquote>Jest is fast and convenient
+        and it has plenty of community support behind it. It lets us run our unit
+        tests with Enzyme and snapshot\u00a0tests.</blockquote>\n<h3>Enzyme overview</h3>\n<p>The
+        Enzyme is a JavaScript Testing utility for React that makes it easier to assert,
+        manipulate, and traverse your Components\u2019 output. Enzyme\u2019s API is
+        meant to be intuitive by simulating jQuery\u2019s API for DOM manipulation
+        and traversal.</p>\n<p>Companies like Airbnb<strong>, </strong>BlaBlaCar<strong>,
+        </strong>and Redox Engine use Enzyme in their tech\u00a0stacks.</p>\n<a href=\"https://medium.com/media/8e6a770d48479c68fbf60f65e1fce04f/href\">https://medium.com/media/8e6a770d48479c68fbf60f65e1fce04f/href</a><h3>react-native-testing-library
+        overview</h3>\n<p>It is a lightweight solution for testing your React Native
+        components which provides small utility functions on top of <em>react-test-renderer</em>.
+        Thus, always up to date with the latest React features. It prevents you from
+        testing implementation details.</p>\n<a href=\"https://medium.com/media/dcf2c5f941221b1c7f56efb46c2b1def/href\">https://medium.com/media/dcf2c5f941221b1c7f56efb46c2b1def/href</a><h3>Integration
+        testing</h3>\n<p>The most difficult part of automated testing on mobile is
+        the tip of the testing pyramid\u200a\u2014\u200aE2E. The core problem with
+        E2E tests is flakiness\u200a\u2014\u200atests are usually not deterministic.</p>\n<p>There
+        are two well-supported solutions on the market for mobile apps testing. Gray
+        box end-to-end testing and automation library called <a href=\"https://github.com/wix/Detox\">Detox</a>,
+        and open source, a cross-platform test automation tool for native, hybrid
+        and mobile apps called\u00a0<a href=\"https://github.com/appium/appium\">Appium</a>.</p>\n<h3>Detox
+        overview</h3>\n<p>The high speed of native mobile development requires us
+        to adopt continuous integration workflows. It means our reliance on manual
+        QA has to drop significantly. Detox tests your mobile app while it\u2019s
+        running in a real device/simulator, interacting with it just like a real\u00a0user.</p>\n<p>Companies
+        reportedly use Detox in their tech stacks, including Glorgo, Dropboy, and\u00a0Jumpn.</p>\n<h4>Core
+        features:</h4>\n<ul>\n<li>Automatically Synchronized. Stops flakiness at the
+        core by monitoring asynchronous operations in your\u00a0app</li>\n<li>Debuggable.
+        Modern async-await API allows breakpoints in asynchronous tests to work as\u00a0expected</li>\n<li>Independent
+        Test Runner. Use Mocha, AVA, or any other JavaScript test runner you\u00a0like</li>\n</ul>\n<a
+        href=\"https://medium.com/media/c9f9af14831f081872708aad8db803df/href\">https://medium.com/media/c9f9af14831f081872708aad8db803df/href</a><h3>Appium
+        overview</h3>\n<p>Appium is an open-source test automation framework. You
+        can use it with native, hybrid, and mobile web apps. It drives iOS and Android
+        apps using the WebDriver protocol. Appium is sponsored by <a href=\"https://saucelabs.com/\">Sauce
+        Labs</a> and a community of open source developers.</p>\n<figure><img alt=\"\"
+        src=\"https://cdn-images-1.medium.com/max/599/0*GXG-oNdkx0UpHFvU\"><figcaption>From
+        the official site <a href=\"http://appium.io/\">http://appium.io/</a></figcaption></figure><p>More
+        than 50 companies constantly use Appium in their tech stacks, including N26,
+        Intuit, and PedidosYa.</p>\n<h4>Why developers like\u00a0Appium:</h4>\n<ul>\n<li>Open-source</li>\n<li>You
+        don\u2019t have to recompile your app or modify it in any way, due to the
+        use of standard automation APIs on all platforms</li>\n<li>You can write tests
+        with your favorite dev tools using any WebDriver-compatible language such
+        as Java, Objective-C, JavaScript (Node), PHP, Python, Ruby, C#, Clojure, or
+        Perl with the Selenium WebDriver API and language-specific client libraries</li>\n<li>You
+        can use any testing framework</li>\n<li>Within the same script, you can switch
+        seamlessly between native app automation and WebView automation, all using
+        the WebDriver model that\u2019s already the standard for web automation</li>\n</ul>\n<h4>Kevin
+        Roulleau, QA Engineer Freelance at\u00a0happn:</h4>\n<blockquote><em>I chose
+        WebdriverIO and Appium to implement E2E tests solution on a native mobile
+        app. WebdriverIO goes well beyond just implementing the Selenium / Appium
+        protocol and allows us to run tests in parallel out of the box. Appium has
+        the big advantage of supporting iOS and Android platforms, so the test codebase
+        and tools are exactly the same, which greatly reduces the learning curve and
+        implementation time.</em></blockquote>\n<h3>Summary</h3>\n<p>Testing mobile
+        applications is a big problem in modern software development. I analyzed the
+        most popular testing methods in 2020. As a result, I didn\u2019t find a perfect
+        solution that covers all\u00a0needs.</p>\n<p>Using Jest in pair with Enzyme
+        will give you coverage of the individual components of the application. As
+        a replacement for Enzyme, you can consider react-native-testing-library which
+        has a smaller API, and enough for small projects hence takes up less memory
+        and resources.</p>\n<p>For integration tests, you can use already discovered
+        solutions, as well as new ones that are more convenient to use but for which
+        you need to do additional configuration. Detox is built from the ground up
+        to support React Native projects as well as pure native ones. Appium supports
+        app automation across a variety of platforms, like iOS, Android, Windows,
+        and\u00a0Mac.</p>\n<p><strong>Ilya Novohatskyi </strong>is a Software Engineer
+        at <a href=\"https://www.jetthoughts.com/\">JetThoughts</a>. Follow him on
+        <a href=\"https://www.linkedin.com/in/ilya-novohatskyi-a61644114/\">LinkedIn</a>
+        or\u00a0<a href=\"https://github.com/sweatC\">GitHub</a>.</p>\n<blockquote>If
+        you enjoyed this story, we recommend reading our <a href=\"https://jtway.co/latest\">latest
+        tech stories</a> and <a href=\"https://jtway.co/trending\">trending tech\u00a0stories</a>.</blockquote>\n<img
+        src=\"https://medium.com/_/stat?event=post.clientViewed&amp;referrerSource=full_rss&amp;postId=3b1d55e6e6f3\"
+        width=\"1\" height=\"1\"><hr>\n<p><a href=\"https://jtway.co/react-native-testing-options-overview-3b1d55e6e6f3\">React
+        Native Testing Options Overview</a> was originally published in <a href=\"https://jtway.co/\">JTWay</a>
+        on Medium, where people are continuing the conversation by highlighting and
+        responding to this story.</p>\n","content":"\n<p>After investigating 100 articles
+        about testing React Native applications I detected 2 main methods of testing
+        which helped me succeed and can definitely help\u00a0you.</p>\n<figure><img
+        alt=\"\" src=\"https://cdn-images-1.medium.com/max/1024/0*x7YNZtBBiyYwpr3u\"><figcaption>Photo
+        by <a href=\"https://unsplash.com/@arstyy?utm_source=medium&amp;utm_medium=referral\">Austin
+        Neill</a> on\u00a0<a href=\"https://unsplash.com/?utm_source=medium&amp;utm_medium=referral\">Unsplash</a></figcaption></figure><h3>Unit
+        testing</h3>\n<p>A lot of people use <a href=\"https://jestjs.io/docs/en/tutorial-react-native\">Jest</a>
+        with <a href=\"https://airbnb.io/enzyme/docs/guides/react-native.html\">Enzyme</a>
+        to make unit testing more confident and more easygoing. You can do snapshot
+        testing, test components, and assert functional staff.</p>\n<p>There is another
+        option called <a href=\"https://github.com/callstack/react-native-testing-library\">React
+        Native Testing Library</a> is a lightweight React Native testing utilities
+        helping you write better tests with less\u00a0effort.</p>\n<h3>Jest overview</h3>\n<p>More
+        than 500 companies use Jest in their tech stacks, including Airbnb<strong>,
+        </strong>Facebook<strong>, </strong>and Instagram.</p>\n<h4>Reasons why companies
+        use\u00a0Jest:</h4>\n<ul>\n<li>Open-source</li>\n<li>Mock by default makes
+        testing much\u00a0simpler</li>\n<li>Out of the box code\u00a0coverage</li>\n</ul>\n<h4>Common
+        Approach</h4>\n<p>Built on top of the Jasmine test framework, using natural
+        <em>expect(value).toBe(other)</em> assertions.</p>\n<h4>Mock by\u00a0Default</h4>\n<p>Automatically
+        mocks CommonJS modules returned by <em>require()</em> as a result most existing
+        code testable.</p>\n<h4>Short Feedback\u00a0Loop</h4>\n<p>DOM APIs are mocked.
+        Tests run in parallel via a Node.js command-line utility.</p>\n<h4>Russel
+        Werner, Lead Engineer at StackShare:</h4>\n<blockquote>Jest is fast and convenient
+        and it has plenty of community support behind it. It lets us run our unit
+        tests with Enzyme and snapshot\u00a0tests.</blockquote>\n<h3>Enzyme overview</h3>\n<p>The
+        Enzyme is a JavaScript Testing utility for React that makes it easier to assert,
+        manipulate, and traverse your Components\u2019 output. Enzyme\u2019s API is
+        meant to be intuitive by simulating jQuery\u2019s API for DOM manipulation
+        and traversal.</p>\n<p>Companies like Airbnb<strong>, </strong>BlaBlaCar<strong>,
+        </strong>and Redox Engine use Enzyme in their tech\u00a0stacks.</p>\n<a href=\"https://medium.com/media/8e6a770d48479c68fbf60f65e1fce04f/href\">https://medium.com/media/8e6a770d48479c68fbf60f65e1fce04f/href</a><h3>react-native-testing-library
+        overview</h3>\n<p>It is a lightweight solution for testing your React Native
+        components which provides small utility functions on top of <em>react-test-renderer</em>.
+        Thus, always up to date with the latest React features. It prevents you from
+        testing implementation details.</p>\n<a href=\"https://medium.com/media/dcf2c5f941221b1c7f56efb46c2b1def/href\">https://medium.com/media/dcf2c5f941221b1c7f56efb46c2b1def/href</a><h3>Integration
+        testing</h3>\n<p>The most difficult part of automated testing on mobile is
+        the tip of the testing pyramid\u200a\u2014\u200aE2E. The core problem with
+        E2E tests is flakiness\u200a\u2014\u200atests are usually not deterministic.</p>\n<p>There
+        are two well-supported solutions on the market for mobile apps testing. Gray
+        box end-to-end testing and automation library called <a href=\"https://github.com/wix/Detox\">Detox</a>,
+        and open source, a cross-platform test automation tool for native, hybrid
+        and mobile apps called\u00a0<a href=\"https://github.com/appium/appium\">Appium</a>.</p>\n<h3>Detox
+        overview</h3>\n<p>The high speed of native mobile development requires us
+        to adopt continuous integration workflows. It means our reliance on manual
+        QA has to drop significantly. Detox tests your mobile app while it\u2019s
+        running in a real device/simulator, interacting with it just like a real\u00a0user.</p>\n<p>Companies
+        reportedly use Detox in their tech stacks, including Glorgo, Dropboy, and\u00a0Jumpn.</p>\n<h4>Core
+        features:</h4>\n<ul>\n<li>Automatically Synchronized. Stops flakiness at the
+        core by monitoring asynchronous operations in your\u00a0app</li>\n<li>Debuggable.
+        Modern async-await API allows breakpoints in asynchronous tests to work as\u00a0expected</li>\n<li>Independent
+        Test Runner. Use Mocha, AVA, or any other JavaScript test runner you\u00a0like</li>\n</ul>\n<a
+        href=\"https://medium.com/media/c9f9af14831f081872708aad8db803df/href\">https://medium.com/media/c9f9af14831f081872708aad8db803df/href</a><h3>Appium
+        overview</h3>\n<p>Appium is an open-source test automation framework. You
+        can use it with native, hybrid, and mobile web apps. It drives iOS and Android
+        apps using the WebDriver protocol. Appium is sponsored by <a href=\"https://saucelabs.com/\">Sauce
+        Labs</a> and a community of open source developers.</p>\n<figure><img alt=\"\"
+        src=\"https://cdn-images-1.medium.com/max/599/0*GXG-oNdkx0UpHFvU\"><figcaption>From
+        the official site <a href=\"http://appium.io/\">http://appium.io/</a></figcaption></figure><p>More
+        than 50 companies constantly use Appium in their tech stacks, including N26,
+        Intuit, and PedidosYa.</p>\n<h4>Why developers like\u00a0Appium:</h4>\n<ul>\n<li>Open-source</li>\n<li>You
+        don\u2019t have to recompile your app or modify it in any way, due to the
+        use of standard automation APIs on all platforms</li>\n<li>You can write tests
+        with your favorite dev tools using any WebDriver-compatible language such
+        as Java, Objective-C, JavaScript (Node), PHP, Python, Ruby, C#, Clojure, or
+        Perl with the Selenium WebDriver API and language-specific client libraries</li>\n<li>You
+        can use any testing framework</li>\n<li>Within the same script, you can switch
+        seamlessly between native app automation and WebView automation, all using
+        the WebDriver model that\u2019s already the standard for web automation</li>\n</ul>\n<h4>Kevin
+        Roulleau, QA Engineer Freelance at\u00a0happn:</h4>\n<blockquote><em>I chose
+        WebdriverIO and Appium to implement E2E tests solution on a native mobile
+        app. WebdriverIO goes well beyond just implementing the Selenium / Appium
+        protocol and allows us to run tests in parallel out of the box. Appium has
+        the big advantage of supporting iOS and Android platforms, so the test codebase
+        and tools are exactly the same, which greatly reduces the learning curve and
+        implementation time.</em></blockquote>\n<h3>Summary</h3>\n<p>Testing mobile
+        applications is a big problem in modern software development. I analyzed the
+        most popular testing methods in 2020. As a result, I didn\u2019t find a perfect
+        solution that covers all\u00a0needs.</p>\n<p>Using Jest in pair with Enzyme
+        will give you coverage of the individual components of the application. As
+        a replacement for Enzyme, you can consider react-native-testing-library which
+        has a smaller API, and enough for small projects hence takes up less memory
+        and resources.</p>\n<p>For integration tests, you can use already discovered
+        solutions, as well as new ones that are more convenient to use but for which
+        you need to do additional configuration. Detox is built from the ground up
+        to support React Native projects as well as pure native ones. Appium supports
+        app automation across a variety of platforms, like iOS, Android, Windows,
+        and\u00a0Mac.</p>\n<p><strong>Ilya Novohatskyi </strong>is a Software Engineer
+        at <a href=\"https://www.jetthoughts.com/\">JetThoughts</a>. Follow him on
+        <a href=\"https://www.linkedin.com/in/ilya-novohatskyi-a61644114/\">LinkedIn</a>
+        or\u00a0<a href=\"https://github.com/sweatC\">GitHub</a>.</p>\n<blockquote>If
+        you enjoyed this story, we recommend reading our <a href=\"https://jtway.co/latest\">latest
+        tech stories</a> and <a href=\"https://jtway.co/trending\">trending tech\u00a0stories</a>.</blockquote>\n<img
+        src=\"https://medium.com/_/stat?event=post.clientViewed&amp;referrerSource=full_rss&amp;postId=3b1d55e6e6f3\"
+        width=\"1\" height=\"1\"><hr>\n<p><a href=\"https://jtway.co/react-native-testing-options-overview-3b1d55e6e6f3\">React
+        Native Testing Options Overview</a> was originally published in <a href=\"https://jtway.co/\">JTWay</a>
+        on Medium, where people are continuing the conversation by highlighting and
+        responding to this story.</p>\n","enclosure":{},"categories":["jest","detox","react-native","react","testing"]},{"title":"How
+        To Write The Right Content For Your Article","pubDate":"2020-01-17 08:28:43","link":"https://jtway.co/how-to-write-the-right-content-for-your-article-e5075ad0274f?source=rss-c55e7783810f------2","guid":"https://medium.com/p/e5075ad0274f","author":"JetThoughts","thumbnail":"https://cdn-images-1.medium.com/max/1024/0*RbzmUQ6Q8rSrw0Q9","description":"\n<p>There
+        are moments when you\u2019re full of motivation, ideas come up with your mind
+        and straight onto the page. But there are other moments when you take up hours
+        of your time, before getting to that last sentence. You\u2019re almost about
+        giving\u00a0up.</p>\n<p>It\u2019s time to write creating content. But not
+        just any content. We\u2019re talking creative, suitable and interesting content
+        that actually gets read. And that\u2019s exactly what you\u2019ll get in this\u00a0article.</p>\n<figure><img
+        alt=\"\" src=\"https://cdn-images-1.medium.com/max/1024/0*RbzmUQ6Q8rSrw0Q9\"><figcaption>Photo
+        by <a href=\"https://unsplash.com/@kaleidico?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText\">Kaleidico</a>
+        on\u00a0<a href=\"https://unsplash.com/s/photos/content?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText\">Unsplash</a></figcaption></figure><p>Use
+        these specific formulas that you can plug-and-play to craft your blog posts
+        in under an\u00a0hour.</p>\n<p>Let\u2019s get to\u00a0it.</p>\n<h3>Step #1\u200a\u2014\u200aThe
+        Power of Headlines</h3>\n<p>The headline has the ability to make or break
+        a blog post. It impacts how (and if) it\u2019s found in search engines and
+        social bookmarking sites, it influences whether people visit your blog in
+        News Readers, it affects whether people leave a comment and is vital in whether
+        people actually read what you have to\u00a0say.</p>\n<blockquote>Read more
+        here how to write catchy headlines <a href=\"https://jtway.co/4-tricks-to-write-catchy-headlines-16d963cf5222\">https://jtway.co/4-tricks-to-write-catchy-headlines-16d963cf5222</a>\n</blockquote>\n<h3>Step
+        #2\u200a\u2014\u200aBuild an idea\u00a0bank</h3>\n<p>Use these questions to
+        brainstorm, and add the answers to them. You can then use the headline formulas
+        that I\u2019ll be giving you to craft a custom headline.</p>\n<p>Questions
+        to use when considering your products/services:</p>\n<ul>\n<li>What\u2019s
+        the\u00a0urgency?</li>\n<li>Why is your product relevant\u00a0now?</li>\n<li>Why
+        is your product the #1 solution?</li>\n</ul>\n<p>Then, audit your popular
+        blog content. The best way to know what content will delight your audience
+        is to pinpoint blog posts that have already hit the\u00a0mark.</p>\n<p>Get
+        in tune with the desires and pain points of your target audience. It\u2019s
+        to get into the heads and hearts of your audience. Here\u2019s where you can
+        get that\u00a0insight:</p>\n<ul>\n<li>Blog comments</li>\n<li>Quora</li>\n<li>Facebook
+        groups</li>\n</ul>\n<h3>Step #3\u200a\u2014\u200aThe Importance of Being\u00a0Original</h3>\n<p>People
+        are drawn to others who speak their minds, who have something unique to say
+        and who say it in a creative and fresh way. Say what everyone else is saying
+        in the same way that everyone else is saying it and you\u2019re almost guaranteed
+        of being largely\u00a0ignored.</p>\n<p>Few extra principles to be more original:</p>\n<ul>\n<li>\n<strong>Credibility</strong>\u200a\u2014\u200aYour
+        readers need to believe in their own ability to produce results. That\u2019s
+        where providing easily consumable and actionable content will come into\u00a0play.</li>\n<li>\n<strong>Urgency</strong>\u200a\u2014\u200aYou
+        need to help your readers get over their tendency to procrastinate. The way
+        to do that is to emphasize the urgency. Why does the information in your blog
+        post matter\u00a0today?</li>\n<li>\n<strong>Authority</strong>\u200a\u2014\u200athe
+        more authority you command, the more people will bet on you to deliver the
+        transformation that they\u00a0seek.</li>\n</ul>\n<h3>Step #4\u200a\u2014\u200aThe
+        Value of Scannable Content</h3>\n<p>Online readers tend to scan content. As
+        a result, if you place visual cues in your posts that draw the eye to important
+        points you\u2019ll find people stick with you longer into your\u00a0posts.</p>\n<blockquote>Read
+        more here <a href=\"https://jtway.co/tips-to-attract-readers-to-read-your-post-e693dfcdbeb8\">https://jtway.co/tips-to-attract-readers-to-read-your-post-e693dfcdbeb8</a>\n</blockquote>\n<h3>Step
+        #5\u200a\u2014\u200aShortness is the\u00a0key</h3>\n<p>Use short sentences,
+        short paragraphs, and short posts. Never write more than two pages on any
+        subject. Over time, try to write less, not more. In general, shorten everything.</p>\n<p><em>Note:
+        short does not mean that your writing can\u2019t be stylistic and intelligent.
+        Short means simple and understandable.</em></p>\n<h3>Step #6\u200a\u2014\u200aShow,
+        don\u2019t\u00a0tell</h3>\n<p>Show, don\u2019t tell is a technique used in
+        various kinds of texts to allow the reader to experience the story through
+        action, words, thoughts, senses, and feelings rather than through the author\u2019s
+        exposition, summarization, and description.</p>\n<p>It avoids adjectives describing
+        the author\u2019s analysis, but instead describes the scene in such a way
+        that the reader can draw his or her own conclusions.</p>\n<h3>Step #7\u200a\u2014\u200aGreat\u00a0Visual</h3>\n<p>Another
+        simple technique for providing an additional point of interest in your posts
+        is to provide something visual.</p>\n<p>Don\u2019t use images in every chapter,
+        but add a few suitable pictures and screenshots in your article, it always
+        increases reader attention. Images have the power to communicate in ways that
+        words cannot\u200a\u2014\u200ause\u00a0them.</p>\n<h3>Conclusion</h3>\n<p>Even
+        if you\u2019re a self-proclaimed terrible writer or hate the writing process,
+        you still can create the persuasive content of an article without consuming
+        days of your\u00a0time.</p>\n<p>What it takes is commitment and trust in the
+        systems that have already been proven to generate\u00a0results.</p>\n<p>Good
+        luck!</p>\n<blockquote>\n<strong>Ruslana</strong> is a Lead Generation Manager
+        at <a href=\"https://www.jetthoughts.com/\">JetThoughts</a>. Follow her on
+        <a href=\"https://www.linkedin.com/in/ruslana-brykaliuk-970016135/\">LinkedIn</a>.</blockquote>\n<blockquote>If
+        you enjoyed this story, we recommend reading our <a href=\"https://jtway.co/latest\">latest
+        tech stories</a> and <a href=\"https://jtway.co/trending\">trending tech\u00a0stories</a>.</blockquote>\n<img
+        src=\"https://medium.com/_/stat?event=post.clientViewed&amp;referrerSource=full_rss&amp;postId=e5075ad0274f\"
+        width=\"1\" height=\"1\"><hr>\n<p><a href=\"https://jtway.co/how-to-write-the-right-content-for-your-article-e5075ad0274f\">How
+        To Write The Right Content For Your Article</a> was originally published in
+        <a href=\"https://jtway.co/\">JTWay</a> on Medium, where people are continuing
+        the conversation by highlighting and responding to this story.</p>\n","content":"\n<p>There
+        are moments when you\u2019re full of motivation, ideas come up with your mind
+        and straight onto the page. But there are other moments when you take up hours
+        of your time, before getting to that last sentence. You\u2019re almost about
+        giving\u00a0up.</p>\n<p>It\u2019s time to write creating content. But not
+        just any content. We\u2019re talking creative, suitable and interesting content
+        that actually gets read. And that\u2019s exactly what you\u2019ll get in this\u00a0article.</p>\n<figure><img
+        alt=\"\" src=\"https://cdn-images-1.medium.com/max/1024/0*RbzmUQ6Q8rSrw0Q9\"><figcaption>Photo
+        by <a href=\"https://unsplash.com/@kaleidico?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText\">Kaleidico</a>
+        on\u00a0<a href=\"https://unsplash.com/s/photos/content?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText\">Unsplash</a></figcaption></figure><p>Use
+        these specific formulas that you can plug-and-play to craft your blog posts
+        in under an\u00a0hour.</p>\n<p>Let\u2019s get to\u00a0it.</p>\n<h3>Step #1\u200a\u2014\u200aThe
+        Power of Headlines</h3>\n<p>The headline has the ability to make or break
+        a blog post. It impacts how (and if) it\u2019s found in search engines and
+        social bookmarking sites, it influences whether people visit your blog in
+        News Readers, it affects whether people leave a comment and is vital in whether
+        people actually read what you have to\u00a0say.</p>\n<blockquote>Read more
+        here how to write catchy headlines <a href=\"https://jtway.co/4-tricks-to-write-catchy-headlines-16d963cf5222\">https://jtway.co/4-tricks-to-write-catchy-headlines-16d963cf5222</a>\n</blockquote>\n<h3>Step
+        #2\u200a\u2014\u200aBuild an idea\u00a0bank</h3>\n<p>Use these questions to
+        brainstorm, and add the answers to them. You can then use the headline formulas
+        that I\u2019ll be giving you to craft a custom headline.</p>\n<p>Questions
+        to use when considering your products/services:</p>\n<ul>\n<li>What\u2019s
+        the\u00a0urgency?</li>\n<li>Why is your product relevant\u00a0now?</li>\n<li>Why
+        is your product the #1 solution?</li>\n</ul>\n<p>Then, audit your popular
+        blog content. The best way to know what content will delight your audience
+        is to pinpoint blog posts that have already hit the\u00a0mark.</p>\n<p>Get
+        in tune with the desires and pain points of your target audience. It\u2019s
+        to get into the heads and hearts of your audience. Here\u2019s where you can
+        get that\u00a0insight:</p>\n<ul>\n<li>Blog comments</li>\n<li>Quora</li>\n<li>Facebook
+        groups</li>\n</ul>\n<h3>Step #3\u200a\u2014\u200aThe Importance of Being\u00a0Original</h3>\n<p>People
+        are drawn to others who speak their minds, who have something unique to say
+        and who say it in a creative and fresh way. Say what everyone else is saying
+        in the same way that everyone else is saying it and you\u2019re almost guaranteed
+        of being largely\u00a0ignored.</p>\n<p>Few extra principles to be more original:</p>\n<ul>\n<li>\n<strong>Credibility</strong>\u200a\u2014\u200aYour
+        readers need to believe in their own ability to produce results. That\u2019s
+        where providing easily consumable and actionable content will come into\u00a0play.</li>\n<li>\n<strong>Urgency</strong>\u200a\u2014\u200aYou
+        need to help your readers get over their tendency to procrastinate. The way
+        to do that is to emphasize the urgency. Why does the information in your blog
+        post matter\u00a0today?</li>\n<li>\n<strong>Authority</strong>\u200a\u2014\u200athe
+        more authority you command, the more people will bet on you to deliver the
+        transformation that they\u00a0seek.</li>\n</ul>\n<h3>Step #4\u200a\u2014\u200aThe
+        Value of Scannable Content</h3>\n<p>Online readers tend to scan content. As
+        a result, if you place visual cues in your posts that draw the eye to important
+        points you\u2019ll find people stick with you longer into your\u00a0posts.</p>\n<blockquote>Read
+        more here <a href=\"https://jtway.co/tips-to-attract-readers-to-read-your-post-e693dfcdbeb8\">https://jtway.co/tips-to-attract-readers-to-read-your-post-e693dfcdbeb8</a>\n</blockquote>\n<h3>Step
+        #5\u200a\u2014\u200aShortness is the\u00a0key</h3>\n<p>Use short sentences,
+        short paragraphs, and short posts. Never write more than two pages on any
+        subject. Over time, try to write less, not more. In general, shorten everything.</p>\n<p><em>Note:
+        short does not mean that your writing can\u2019t be stylistic and intelligent.
+        Short means simple and understandable.</em></p>\n<h3>Step #6\u200a\u2014\u200aShow,
+        don\u2019t\u00a0tell</h3>\n<p>Show, don\u2019t tell is a technique used in
+        various kinds of texts to allow the reader to experience the story through
+        action, words, thoughts, senses, and feelings rather than through the author\u2019s
+        exposition, summarization, and description.</p>\n<p>It avoids adjectives describing
+        the author\u2019s analysis, but instead describes the scene in such a way
+        that the reader can draw his or her own conclusions.</p>\n<h3>Step #7\u200a\u2014\u200aGreat\u00a0Visual</h3>\n<p>Another
+        simple technique for providing an additional point of interest in your posts
+        is to provide something visual.</p>\n<p>Don\u2019t use images in every chapter,
+        but add a few suitable pictures and screenshots in your article, it always
+        increases reader attention. Images have the power to communicate in ways that
+        words cannot\u200a\u2014\u200ause\u00a0them.</p>\n<h3>Conclusion</h3>\n<p>Even
+        if you\u2019re a self-proclaimed terrible writer or hate the writing process,
+        you still can create the persuasive content of an article without consuming
+        days of your\u00a0time.</p>\n<p>What it takes is commitment and trust in the
+        systems that have already been proven to generate\u00a0results.</p>\n<p>Good
+        luck!</p>\n<blockquote>\n<strong>Ruslana</strong> is a Lead Generation Manager
+        at <a href=\"https://www.jetthoughts.com/\">JetThoughts</a>. Follow her on
+        <a href=\"https://www.linkedin.com/in/ruslana-brykaliuk-970016135/\">LinkedIn</a>.</blockquote>\n<blockquote>If
+        you enjoyed this story, we recommend reading our <a href=\"https://jtway.co/latest\">latest
+        tech stories</a> and <a href=\"https://jtway.co/trending\">trending tech\u00a0stories</a>.</blockquote>\n<img
+        src=\"https://medium.com/_/stat?event=post.clientViewed&amp;referrerSource=full_rss&amp;postId=e5075ad0274f\"
+        width=\"1\" height=\"1\"><hr>\n<p><a href=\"https://jtway.co/how-to-write-the-right-content-for-your-article-e5075ad0274f\">How
+        To Write The Right Content For Your Article</a> was originally published in
+        <a href=\"https://jtway.co/\">JTWay</a> on Medium, where people are continuing
+        the conversation by highlighting and responding to this story.</p>\n","enclosure":{},"categories":["content","blogposting","article-writing","blogging"]},{"title":"Tools
+        for effective providing feedback to distributed development teams","pubDate":"2020-01-12
+        22:11:09","link":"https://jtway.co/useloom-the-best-tool-for-async-remote-communication-7bfcbbffe051?source=rss-c55e7783810f------2","guid":"https://medium.com/p/7bfcbbffe051","author":"JetThoughts","thumbnail":"https://cdn-images-1.medium.com/max/1000/0*qp3KwvUGOgplTVNb","description":"\n<h3>Tools
+        to provide effective feedback for distributed development teams</h3>\n<figure><img
+        alt=\"\" src=\"https://cdn-images-1.medium.com/max/1000/0*qp3KwvUGOgplTVNb\"><figcaption>Photo
+        by <a href=\"https://unsplash.com/@jakobowens1?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText\">Jakob
+        Owens</a> on\u00a0<a href=\"https://unsplash.com/s/photos/video?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText\">Unsplash</a></figcaption></figure><p>How
+        to share info in a remote async environment? What is the best way to keep
+        everyone in the\u00a0loop?</p>\n<p>When people work in the office, their processes
+        are synchronized, and a lot of routines, delivery flows are dependent, which
+        results in bureaucracy and unnecessary tasks ping pong over and over\u00a0again.</p>\n<p>It
+        may not only result in a toxic culture, stressful environment, and overall
+        decrease not just in quality, but also in communication and the way people
+        used to do their\u00a0job.</p>\n<p>Our team at <a href=\"https://medium.com/u/c55e7783810f?source=post_page-----7bfcbbffe051----------------------\">JetThoughts</a>
+        spent tons of time to get the async processes entirely seamless and useful
+        at the same time. One of the tools that entirely changed the way we work was\u00a0<a
+        href=\"https://www.loom.com/\">Loom</a>.</p>\n<h3>What is\u00a0Loom?</h3>\n<p>It\u2019s
+        a screen recording app that also catches the sound that goes out of your mike
+        and might also capture you talking on smth on a screen using the\u00a0webcam.</p>\n<p>It
+        could be installed from <a href=\"https://chrome.google.com/webstore/detail/loom-video-recorder-scree/liecbddmkiiihnedobmlmillhodjkdmb?hl=en-US\">Chrome
+        Web Store</a>. It\u2019s also available for iOS btw. Just add the extension
+        to your browser and register using your Slack or Google account. Here is how
+        the interface looks\u00a0like:</p>\n<figure><img alt=\"\" src=\"https://cdn-images-1.medium.com/max/1024/0*4yAoK_Go5fiLiNbV\"><figcaption>Useloom
+        Interface</figcaption></figure><h3>How to use\u00a0it?</h3>\n<ol>\n<li>Download
+        the plugin\u00a0<a href=\"https://chrome.google.com/webstore/detail/loom-video-recorder-scree/liecbddmkiiihnedobmlmillhodjkdmb?hl=en-US\">here</a>\n</li>\n<li>Click
+        on the icon in the Chrome plugins panel (top right\u00a0corner)</li>\n<li>Register
+        using Google Account or\u00a0Slack</li>\n<li>Once registered, you\u2019ll
+        see the menu to record your screen or current\u00a0tab</li>\n<li>Finish the
+        screencast by clicking the \u201cStop Sharing\u201d button and get your screencast
+        link to share with everyone.</li>\n<li>Optional: play with the options and
+        try also using your webcam in screencast to make it more personal, if you\u00a0want.</li>\n</ol>\n<h3>Why?</h3>\n<p>We
+        often use it to not only record a screencast instead of calling and distracting
+        people but also to document anything worth noticing for future references.</p>\n<p>Once
+        the screencast is recorded, it will give you a link to share with your team
+        or\u00a0clients.</p>\n<p>The best thing about the screencast is that it could
+        be reused as many times as needed, and you can speed up the recording to watch
+        it faster and concentrate on those parts you\u00a0need.</p>\n<p>I hope this
+        tool helps you share your thoughts and ideas and improve the workflow of your\u00a0team.</p>\n<p><strong>Adam
+        Cisco </strong><em>is the Key Account Project Manager at </em><a href=\"http://jetthoughts.com/\"><em>JetThoughts</em></a><em>.
+        Follow him on </em><a href=\"https://www.linkedin.com/in/ad-cis/\">LinkedIn</a><em>.</em></p>\n<blockquote>\n<em>If
+        you enjoyed this story, we recommend reading our</em><a href=\"https://jtway.co/latest\"><em>
+        latest tech stories</em></a><em> and trending</em><a href=\"https://jtway.co/trending\"><em>
+        tech\u00a0stories</em></a><em>.</em>\n</blockquote>\n<img src=\"https://medium.com/_/stat?event=post.clientViewed&amp;referrerSource=full_rss&amp;postId=7bfcbbffe051\"
+        width=\"1\" height=\"1\"><hr>\n<p><a href=\"https://jtway.co/useloom-the-best-tool-for-async-remote-communication-7bfcbbffe051\">Tools
+        for effective providing feedback to distributed development teams</a> was
+        originally published in <a href=\"https://jtway.co/\">JTWay</a> on Medium,
+        where people are continuing the conversation by highlighting and responding
+        to this story.</p>\n","content":"\n<h3>Tools to provide effective feedback
+        for distributed development teams</h3>\n<figure><img alt=\"\" src=\"https://cdn-images-1.medium.com/max/1000/0*qp3KwvUGOgplTVNb\"><figcaption>Photo
+        by <a href=\"https://unsplash.com/@jakobowens1?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText\">Jakob
+        Owens</a> on\u00a0<a href=\"https://unsplash.com/s/photos/video?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText\">Unsplash</a></figcaption></figure><p>How
+        to share info in a remote async environment? What is the best way to keep
+        everyone in the\u00a0loop?</p>\n<p>When people work in the office, their processes
+        are synchronized, and a lot of routines, delivery flows are dependent, which
+        results in bureaucracy and unnecessary tasks ping pong over and over\u00a0again.</p>\n<p>It
+        may not only result in a toxic culture, stressful environment, and overall
+        decrease not just in quality, but also in communication and the way people
+        used to do their\u00a0job.</p>\n<p>Our team at <a href=\"https://medium.com/u/c55e7783810f?source=post_page-----7bfcbbffe051----------------------\">JetThoughts</a>
+        spent tons of time to get the async processes entirely seamless and useful
+        at the same time. One of the tools that entirely changed the way we work was\u00a0<a
+        href=\"https://www.loom.com/\">Loom</a>.</p>\n<h3>What is\u00a0Loom?</h3>\n<p>It\u2019s
+        a screen recording app that also catches the sound that goes out of your mike
+        and might also capture you talking on smth on a screen using the\u00a0webcam.</p>\n<p>It
+        could be installed from <a href=\"https://chrome.google.com/webstore/detail/loom-video-recorder-scree/liecbddmkiiihnedobmlmillhodjkdmb?hl=en-US\">Chrome
+        Web Store</a>. It\u2019s also available for iOS btw. Just add the extension
+        to your browser and register using your Slack or Google account. Here is how
+        the interface looks\u00a0like:</p>\n<figure><img alt=\"\" src=\"https://cdn-images-1.medium.com/max/1024/0*4yAoK_Go5fiLiNbV\"><figcaption>Useloom
+        Interface</figcaption></figure><h3>How to use\u00a0it?</h3>\n<ol>\n<li>Download
+        the plugin\u00a0<a href=\"https://chrome.google.com/webstore/detail/loom-video-recorder-scree/liecbddmkiiihnedobmlmillhodjkdmb?hl=en-US\">here</a>\n</li>\n<li>Click
+        on the icon in the Chrome plugins panel (top right\u00a0corner)</li>\n<li>Register
+        using Google Account or\u00a0Slack</li>\n<li>Once registered, you\u2019ll
+        see the menu to record your screen or current\u00a0tab</li>\n<li>Finish the
+        screencast by clicking the \u201cStop Sharing\u201d button and get your screencast
+        link to share with everyone.</li>\n<li>Optional: play with the options and
+        try also using your webcam in screencast to make it more personal, if you\u00a0want.</li>\n</ol>\n<h3>Why?</h3>\n<p>We
+        often use it to not only record a screencast instead of calling and distracting
+        people but also to document anything worth noticing for future references.</p>\n<p>Once
+        the screencast is recorded, it will give you a link to share with your team
+        or\u00a0clients.</p>\n<p>The best thing about the screencast is that it could
+        be reused as many times as needed, and you can speed up the recording to watch
+        it faster and concentrate on those parts you\u00a0need.</p>\n<p>I hope this
+        tool helps you share your thoughts and ideas and improve the workflow of your\u00a0team.</p>\n<p><strong>Adam
+        Cisco </strong><em>is the Key Account Project Manager at </em><a href=\"http://jetthoughts.com/\"><em>JetThoughts</em></a><em>.
+        Follow him on </em><a href=\"https://www.linkedin.com/in/ad-cis/\">LinkedIn</a><em>.</em></p>\n<blockquote>\n<em>If
+        you enjoyed this story, we recommend reading our</em><a href=\"https://jtway.co/latest\"><em>
+        latest tech stories</em></a><em> and trending</em><a href=\"https://jtway.co/trending\"><em>
+        tech\u00a0stories</em></a><em>.</em>\n</blockquote>\n<img src=\"https://medium.com/_/stat?event=post.clientViewed&amp;referrerSource=full_rss&amp;postId=7bfcbbffe051\"
+        width=\"1\" height=\"1\"><hr>\n<p><a href=\"https://jtway.co/useloom-the-best-tool-for-async-remote-communication-7bfcbbffe051\">Tools
+        for effective providing feedback to distributed development teams</a> was
+        originally published in <a href=\"https://jtway.co/\">JTWay</a> on Medium,
+        where people are continuing the conversation by highlighting and responding
+        to this story.</p>\n","enclosure":{},"categories":["startup","remote-working","tips","productivity","best-practices"]},{"title":"Migrate
+        from Sidekiq to Sidekiq.cr in Rails application","pubDate":"2020-01-03 09:02:34","link":"https://jtway.co/migrate-from-sidekiq-to-sidekiq-cr-in-rails-application-8d26674d9e2a?source=rss-c55e7783810f------2","guid":"https://medium.com/p/8d26674d9e2a","author":"JetThoughts","thumbnail":"https://cdn-images-1.medium.com/max/706/1*Bfh0Xi52cBZdfXtMoWBmHQ.png","description":"\n<blockquote>Where
+        is it better to start the Sidekiq jobs transition from Ruby to Crystal in
+        order to optimize the resources usage on the server and, at the same time,
+        not to struggle with the duplication?</blockquote>\n<figure><img alt=\"\"
+        src=\"https://cdn-images-1.medium.com/max/706/1*Bfh0Xi52cBZdfXtMoWBmHQ.png\"></figure><p>Let\u2019s
+        conduct a little experiment and see if it is possible to integrate the <em>Sidekiq.cr</em>
+        into the Rails application without spending a lot of effort and keeping the
+        code cleanliness.</p>\n<h3>Ruby Part</h3>\n<p>In the <em>Rails</em> application,
+        it\u2019s better to isolate the logic by creating the job in a separate service
+        before getting it to work with the <em>Crystal</em> implementation.</p>\n<p>For
+        using the <em>Crystal</em> worker implementation, its class name and the <em>Sidekiq</em>
+        queue name should be defined as the arguments. This is the way our service
+        will look\u00a0like:</p>\n<p>That\u2019s all for the Rails application!!!</p>\n<h3>Crystal
+        Part</h3>\n<p>In order to support the worker implementation on <em>Crystal</em>,
+        this part should have <em>Sidekig.cr. </em>As it is pointed in the <a href=\"https://github.com/mperham/sidekiq.cr/wiki/Getting-Started#create-some-jobs-using-the-client-api\">documentation</a>:</p>\n<blockquote>Crystal
+        can push jobs for a Ruby process to consume, and vice versa. <br>The Crystal
+        Web UI can monitor Ruby processes, and vice\u00a0versa.</blockquote>\n<p>The
+        next requisition is the ability to work with a database that is the same for
+        the <em>Rails</em> and the <em>Crystal</em> parts. There are several frameworks
+        based on <em>Crystal</em>, which allow such a database connection. To make
+        a choice, we formed the following requirements:</p>\n<ul>\n<li>it should be
+        easy to customize and\u00a0maintain</li>\n<li>it should allow finding the
+        record in a database and updating\u00a0it</li>\n</ul>\n<p>After some research,
+        we choose <a href=\"https://github.com/amberframework/granite\"><em>Granite</em></a><em>.
+        </em>Its pros\u00a0are:</p>\n<ul>\n<li>easy support</li>\n<li>ability to define
+        only attributes, which are going to be\u00a0used</li>\n<li>supporting the
+        Rails-like helpers to operate with the\u00a0records</li>\n</ul>\n<p>The model
+        in the <em>Crystal</em> application will look\u00a0like:</p>\n<p>Example of
+        environment configuration in the s<em>hard.yml</em>:</p>\n<p><a href=\"https://github.com/amberframework/granite/blob/master/docs/readme.md#register-a-connection\">Configure
+        the connection</a> to a database:</p>\n<p>max_pool_size and initial_pool_size\u200a\u2014\u200aare
+        configuration parameters for the <a href=\"https://crystal-lang.org/reference/database/connection_pool.html\">connection
+        pool</a>.</p>\n<p>The next step\u200a\u2014\u200a<em>Sidekiq::CLI</em> configuration
+        and preload of the connection with a database:</p>\n<p>WORKER_CR_CONCURRENCY-
+        is the environment variable that defines the maximum size for a connection
+        pool.</p>\n<h3>Sidekiq worker in the Crystal\u00a0Part</h3>\n<p>This worker
+        will be responsible for fetching the record from the database and running
+        some services:</p>\n<p>The worker\u2019s name should match WORKER_NAME defined
+        in the <em>Rails</em>\u00a0service:</p>\n<pre>WORKER_NAME = ''Broolik::Worker::URLChecker''</pre>\n<p>Specify
+        the queue for the job the same as in the <em>Rails</em> <em>ScheduleUrlCheckService</em>:</p>\n<pre>''queue''
+        =&gt; ''worker.cr''</pre>\n<h3>Make friends Crystal and\u00a0Ruby</h3>\n<p>Thus,
+        the installation of the <em>Crystal</em> part is started using the\u00a0command:</p>\n<pre>crystal
+        build src/sidekiq.cr -o bin/sidekiq.cr --release</pre>\n<p>Finally, run:</p>\n<pre>bin/sidekiq.cr
+        -q worker.cr -c 100 -e production</pre>\n<h3>Link to the\u00a0example</h3>\n<p>You
+        can find this example in our repository <a href=\"https://github.com/jetthoughts/broolik-worker.cr\">jetthoughts/broolik-worker.cr</a>.</p>\n<p><strong>Sergey
+        Sviridov </strong><em>is a Software Engineer at </em><a href=\"https://www.jetthoughts.com/\"><em>JetThoughts</em></a><em>.
+        Follow him on </em><a href=\"https://www.linkedin.com/in/sergey-sviridov-83007199/\">LinkedIn</a>
+        <em>or\u00a0</em><a href=\"https://github.com/SviridovSV\"><em>GitHub</em></a><em>.</em></p>\n<blockquote>\n<em>If
+        you enjoyed this story, we recommend reading our </em><a href=\"https://jtway.co/latest\"><em>latest
+        tech stories</em></a><em> and </em><a href=\"https://jtway.co/trending\"><em>trending
+        tech\u00a0stories</em></a><em>.</em>\n</blockquote>\n<img src=\"https://medium.com/_/stat?event=post.clientViewed&amp;referrerSource=full_rss&amp;postId=8d26674d9e2a\"
+        width=\"1\" height=\"1\"><hr>\n<p><a href=\"https://jtway.co/migrate-from-sidekiq-to-sidekiq-cr-in-rails-application-8d26674d9e2a\">Migrate
+        from Sidekiq to Sidekiq.cr in Rails application</a> was originally published
+        in <a href=\"https://jtway.co/\">JTWay</a> on Medium, where people are continuing
+        the conversation by highlighting and responding to this story.</p>\n","content":"\n<blockquote>Where
+        is it better to start the Sidekiq jobs transition from Ruby to Crystal in
+        order to optimize the resources usage on the server and, at the same time,
+        not to struggle with the duplication?</blockquote>\n<figure><img alt=\"\"
+        src=\"https://cdn-images-1.medium.com/max/706/1*Bfh0Xi52cBZdfXtMoWBmHQ.png\"></figure><p>Let\u2019s
+        conduct a little experiment and see if it is possible to integrate the <em>Sidekiq.cr</em>
+        into the Rails application without spending a lot of effort and keeping the
+        code cleanliness.</p>\n<h3>Ruby Part</h3>\n<p>In the <em>Rails</em> application,
+        it\u2019s better to isolate the logic by creating the job in a separate service
+        before getting it to work with the <em>Crystal</em> implementation.</p>\n<p>For
+        using the <em>Crystal</em> worker implementation, its class name and the <em>Sidekiq</em>
+        queue name should be defined as the arguments. This is the way our service
+        will look\u00a0like:</p>\n<p>That\u2019s all for the Rails application!!!</p>\n<h3>Crystal
+        Part</h3>\n<p>In order to support the worker implementation on <em>Crystal</em>,
+        this part should have <em>Sidekig.cr. </em>As it is pointed in the <a href=\"https://github.com/mperham/sidekiq.cr/wiki/Getting-Started#create-some-jobs-using-the-client-api\">documentation</a>:</p>\n<blockquote>Crystal
+        can push jobs for a Ruby process to consume, and vice versa. <br>The Crystal
+        Web UI can monitor Ruby processes, and vice\u00a0versa.</blockquote>\n<p>The
+        next requisition is the ability to work with a database that is the same for
+        the <em>Rails</em> and the <em>Crystal</em> parts. There are several frameworks
+        based on <em>Crystal</em>, which allow such a database connection. To make
+        a choice, we formed the following requirements:</p>\n<ul>\n<li>it should be
+        easy to customize and\u00a0maintain</li>\n<li>it should allow finding the
+        record in a database and updating\u00a0it</li>\n</ul>\n<p>After some research,
+        we choose <a href=\"https://github.com/amberframework/granite\"><em>Granite</em></a><em>.
+        </em>Its pros\u00a0are:</p>\n<ul>\n<li>easy support</li>\n<li>ability to define
+        only attributes, which are going to be\u00a0used</li>\n<li>supporting the
+        Rails-like helpers to operate with the\u00a0records</li>\n</ul>\n<p>The model
+        in the <em>Crystal</em> application will look\u00a0like:</p>\n<p>Example of
+        environment configuration in the s<em>hard.yml</em>:</p>\n<p><a href=\"https://github.com/amberframework/granite/blob/master/docs/readme.md#register-a-connection\">Configure
+        the connection</a> to a database:</p>\n<p>max_pool_size and initial_pool_size\u200a\u2014\u200aare
+        configuration parameters for the <a href=\"https://crystal-lang.org/reference/database/connection_pool.html\">connection
+        pool</a>.</p>\n<p>The next step\u200a\u2014\u200a<em>Sidekiq::CLI</em> configuration
+        and preload of the connection with a database:</p>\n<p>WORKER_CR_CONCURRENCY-
+        is the environment variable that defines the maximum size for a connection
+        pool.</p>\n<h3>Sidekiq worker in the Crystal\u00a0Part</h3>\n<p>This worker
+        will be responsible for fetching the record from the database and running
+        some services:</p>\n<p>The worker\u2019s name should match WORKER_NAME defined
+        in the <em>Rails</em>\u00a0service:</p>\n<pre>WORKER_NAME = ''Broolik::Worker::URLChecker''</pre>\n<p>Specify
+        the queue for the job the same as in the <em>Rails</em> <em>ScheduleUrlCheckService</em>:</p>\n<pre>''queue''
+        =&gt; ''worker.cr''</pre>\n<h3>Make friends Crystal and\u00a0Ruby</h3>\n<p>Thus,
+        the installation of the <em>Crystal</em> part is started using the\u00a0command:</p>\n<pre>crystal
+        build src/sidekiq.cr -o bin/sidekiq.cr --release</pre>\n<p>Finally, run:</p>\n<pre>bin/sidekiq.cr
+        -q worker.cr -c 100 -e production</pre>\n<h3>Link to the\u00a0example</h3>\n<p>You
+        can find this example in our repository <a href=\"https://github.com/jetthoughts/broolik-worker.cr\">jetthoughts/broolik-worker.cr</a>.</p>\n<p><strong>Sergey
+        Sviridov </strong><em>is a Software Engineer at </em><a href=\"https://www.jetthoughts.com/\"><em>JetThoughts</em></a><em>.
+        Follow him on </em><a href=\"https://www.linkedin.com/in/sergey-sviridov-83007199/\">LinkedIn</a>
+        <em>or\u00a0</em><a href=\"https://github.com/SviridovSV\"><em>GitHub</em></a><em>.</em></p>\n<blockquote>\n<em>If
+        you enjoyed this story, we recommend reading our </em><a href=\"https://jtway.co/latest\"><em>latest
+        tech stories</em></a><em> and </em><a href=\"https://jtway.co/trending\"><em>trending
+        tech\u00a0stories</em></a><em>.</em>\n</blockquote>\n<img src=\"https://medium.com/_/stat?event=post.clientViewed&amp;referrerSource=full_rss&amp;postId=8d26674d9e2a\"
+        width=\"1\" height=\"1\"><hr>\n<p><a href=\"https://jtway.co/migrate-from-sidekiq-to-sidekiq-cr-in-rails-application-8d26674d9e2a\">Migrate
+        from Sidekiq to Sidekiq.cr in Rails application</a> was originally published
+        in <a href=\"https://jtway.co/\">JTWay</a> on Medium, where people are continuing
+        the conversation by highlighting and responding to this story.</p>\n","enclosure":{},"categories":["optimization","tutorial","development","ruby-on-rails","programming"]},{"title":"A
+        Practical Guide To Writing Introductions","pubDate":"2019-12-27 09:39:30","link":"https://jtway.co/a-practical-guide-to-writing-introductions-17210d563621?source=rss-c55e7783810f------2","guid":"https://medium.com/p/17210d563621","author":"JetThoughts","thumbnail":"https://cdn-images-1.medium.com/max/1024/0*xKpTC2XJ1IwMTfxD","description":"\n<p><em>Are
+        you struggling with the introduction as it\u2019s absolutely annoying thing
+        that has to be written? It simply summarises the main points of your article.
+        So why so much noise about\u00a0it?</em></p>\n<p>If your introduction is weak,
+        it\u2019ll discourage the reader from reading further\u200a\u2014\u200aeven
+        if the title was captivating. You have just a few seconds to catch your reader\u2019s
+        attention.</p>\n<p>Let\u2019s go!</p>\n<figure><img alt=\"\" src=\"https://cdn-images-1.medium.com/max/1024/0*xKpTC2XJ1IwMTfxD\"><figcaption>Photo
+        by <a href=\"https://unsplash.com/@craftedbygc?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText\">Green
+        Chameleon</a> on\u00a0<a href=\"https://unsplash.com/s/photos/writer?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText\">Unsplash</a></figcaption></figure><p>The
+        introduction is referred to as a lead, which simply means the opening paragraph
+        of a news story, essay, or\u00a0article.</p>\n<p>There are 3 important elements
+        of a good introduction. Let\u2019s briefly look at\u00a0them:</p>\n<ul>\n<li>\n<strong><em>Hook:</em></strong>
+        This is what pulls the reader into your blog entry. Make it specific, brief,
+        and interesting. It can be a single sentence, a phrase, or even a word. Your
+        hook could be a question.</li>\n<li>\n<strong><em>Transition:</em></strong>
+        The hook grabs your attention and then leads the reader into the transition.
+        The transition is usually a sentence that connects the hook to the body of
+        the post and clarifies the title. This is how you lead people through your
+        blog\u00a0entry.</li>\n<li>\n<strong><em>Thesis:</em></strong> The last element
+        of an introduction is the thesis. It summarizes the topic and strengthens
+        the reason why the reader should continue with your blog post idea. If you
+        do a great job at the transition stage, the thesis will likely fall into place
+        and make a great blog\u00a0post.</li>\n</ul>\n<figure><img alt=\"\" src=\"https://cdn-images-1.medium.com/max/605/0*EeGx6dBo1kGvLYmY\"></figure><p>Anyway,
+        a catchy introduction provides the reader with a brief overview of your topic
+        and an explanation of your thesis. The successful introduction is fresh, engaging,
+        and enjoyable.</p>\n<p>Good luck!</p>\n<blockquote>\n<strong>Ruslana</strong>
+        is a Lead Generation Manager at <a href=\"https://www.jetthoughts.com/\">JetThoughts</a>.
+        Follow her on <a href=\"https://www.linkedin.com/in/ruslana-brykaliuk-970016135/\">LinkedIn</a>.</blockquote>\n<blockquote>If
+        you enjoyed this story, we recommend reading our <a href=\"https://jtway.co/latest\">latest
+        tech stories</a> and <a href=\"https://jtway.co/trending\">trending tech\u00a0stories</a>.</blockquote>\n<img
+        src=\"https://medium.com/_/stat?event=post.clientViewed&amp;referrerSource=full_rss&amp;postId=17210d563621\"
+        width=\"1\" height=\"1\"><hr>\n<p><a href=\"https://jtway.co/a-practical-guide-to-writing-introductions-17210d563621\">A
+        Practical Guide To Writing Introductions</a> was originally published in <a
+        href=\"https://jtway.co/\">JTWay</a> on Medium, where people are continuing
+        the conversation by highlighting and responding to this story.</p>\n","content":"\n<p><em>Are
+        you struggling with the introduction as it\u2019s absolutely annoying thing
+        that has to be written? It simply summarises the main points of your article.
+        So why so much noise about\u00a0it?</em></p>\n<p>If your introduction is weak,
+        it\u2019ll discourage the reader from reading further\u200a\u2014\u200aeven
+        if the title was captivating. You have just a few seconds to catch your reader\u2019s
+        attention.</p>\n<p>Let\u2019s go!</p>\n<figure><img alt=\"\" src=\"https://cdn-images-1.medium.com/max/1024/0*xKpTC2XJ1IwMTfxD\"><figcaption>Photo
+        by <a href=\"https://unsplash.com/@craftedbygc?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText\">Green
+        Chameleon</a> on\u00a0<a href=\"https://unsplash.com/s/photos/writer?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText\">Unsplash</a></figcaption></figure><p>The
+        introduction is referred to as a lead, which simply means the opening paragraph
+        of a news story, essay, or\u00a0article.</p>\n<p>There are 3 important elements
+        of a good introduction. Let\u2019s briefly look at\u00a0them:</p>\n<ul>\n<li>\n<strong><em>Hook:</em></strong>
+        This is what pulls the reader into your blog entry. Make it specific, brief,
+        and interesting. It can be a single sentence, a phrase, or even a word. Your
+        hook could be a question.</li>\n<li>\n<strong><em>Transition:</em></strong>
+        The hook grabs your attention and then leads the reader into the transition.
+        The transition is usually a sentence that connects the hook to the body of
+        the post and clarifies the title. This is how you lead people through your
+        blog\u00a0entry.</li>\n<li>\n<strong><em>Thesis:</em></strong> The last element
+        of an introduction is the thesis. It summarizes the topic and strengthens
+        the reason why the reader should continue with your blog post idea. If you
+        do a great job at the transition stage, the thesis will likely fall into place
+        and make a great blog\u00a0post.</li>\n</ul>\n<figure><img alt=\"\" src=\"https://cdn-images-1.medium.com/max/605/0*EeGx6dBo1kGvLYmY\"></figure><p>Anyway,
+        a catchy introduction provides the reader with a brief overview of your topic
+        and an explanation of your thesis. The successful introduction is fresh, engaging,
+        and enjoyable.</p>\n<p>Good luck!</p>\n<blockquote>\n<strong>Ruslana</strong>
+        is a Lead Generation Manager at <a href=\"https://www.jetthoughts.com/\">JetThoughts</a>.
+        Follow her on <a href=\"https://www.linkedin.com/in/ruslana-brykaliuk-970016135/\">LinkedIn</a>.</blockquote>\n<blockquote>If
+        you enjoyed this story, we recommend reading our <a href=\"https://jtway.co/latest\">latest
+        tech stories</a> and <a href=\"https://jtway.co/trending\">trending tech\u00a0stories</a>.</blockquote>\n<img
+        src=\"https://medium.com/_/stat?event=post.clientViewed&amp;referrerSource=full_rss&amp;postId=17210d563621\"
+        width=\"1\" height=\"1\"><hr>\n<p><a href=\"https://jtway.co/a-practical-guide-to-writing-introductions-17210d563621\">A
+        Practical Guide To Writing Introductions</a> was originally published in <a
+        href=\"https://jtway.co/\">JTWay</a> on Medium, where people are continuing
+        the conversation by highlighting and responding to this story.</p>\n","enclosure":{},"categories":["blogging-for-business","introduction","blogging","writing"]},{"title":"4
+        Tricks to Write Catchy Headlines","pubDate":"2019-12-27 09:32:42","link":"https://jtway.co/4-tricks-to-write-catchy-headlines-16d963cf5222?source=rss-c55e7783810f------2","guid":"https://medium.com/p/16d963cf5222","author":"JetThoughts","thumbnail":"https://cdn-images-1.medium.com/max/1024/0*uUvrHZ7yZV9m2ynt","description":"\n<p>How
+        to improve your writing, and create not just a good headline, but a catchy
+        one? No matter what your content type is, and if you\u2019re either writing
+        a small post or an in-depth\u00a0report.</p>\n<p>The headline is the first
+        thing people will see on a page. Copyblogger estimated that 8 out of 10 people
+        read the title. However, the title doesn\u2019t keep them reading through
+        your blog content. With these headline writing tricks, you\u2019ll get attention
+        from readers immediately.</p>\n<p>Let\u2019s get\u00a0started.</p>\n<figure><img
+        alt=\"\" src=\"https://cdn-images-1.medium.com/max/1024/0*uUvrHZ7yZV9m2ynt\"><figcaption>Photo
+        by <a href=\"https://unsplash.com/@austinchan?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText\">Austin
+        Chan</a> on\u00a0<a href=\"https://unsplash.com/s/photos/article?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText\">Unsplash</a></figcaption></figure><h4><strong>Step
+        #1: Use numbers &amp; data in your\u00a0headline</strong></h4>\n<p>Using numbers
+        and data into your headline is an effective way to make your headlines more
+        fascinating to readers. Several research studies have shown that headlines
+        with numbers tend to generate 73% more social shares and engagement.</p>\n<h4><strong>Step
+        #2: Take a unique rationale into\u00a0account</strong></h4>\n<p>Use unique
+        rationales to write great headlines. The word \u201crationale\u201d simply
+        means \u201can underlying reason on why something should be\u00a0done.\u201d</p>\n<p><strong><em>Some
+        of the rationales that you can include in your headlines are: </em></strong>Tips,
+        Reasons, Lessons, Tricks, Ideas, Ways, Principles, Facts, Secrets, Strategies</p>\n<figure><img
+        alt=\"\" src=\"https://cdn-images-1.medium.com/max/661/0*K7m9YMwsMGd51RHC\"></figure><h4><strong>Step
+        #3: Call for attention</strong></h4>\n<p>\u2018Attention\u2019 simply means
+        mental focus and serious concentration on a given task. How to get it? Here
+        are 4 rules to\u00a0follow:</p>\n<ul><li>Make the headline\u00a0<strong>unique</strong>\n</li></ul>\n<p>\u2018Unique\u2019
+        means being one of a kind. In other words, your headline has to be different
+        from others. But, how do you test for uniqueness?</p>\n<p><em>Simple tip:</em>
+        plug it into Google and enclose the headline in double quotation marks.</p>\n<ul><li>Be
+        <strong>ultra-specific</strong>\n</li></ul>\n<p>Your prospects have questions
+        and they want answers. If you can provide them with an ultra-specific headline
+        and the answer to their questions, you will convert them into loyal readers
+        and customers. The more precise you are, the more authority you\u2019ll gain
+        in your industry.</p>\n<ul><li>It should convey a sense of\u00a0<strong>urgency</strong>\n</li></ul>\n<p>Urgency-based
+        headlines will always grab attention because it makes the reader anticipate
+        what comes next. They don\u2019t want to miss out on what\u2019s on the other
+        side of the headline, once it\u2019s\u00a0clicked.</p>\n<ul><li>Your headline
+        has to be\u00a0<strong>useful</strong>\n</li></ul>\n<p>Useful can mean several
+        things\u200a\u2014\u200apractical, helpful, valuable, informative, worthwhile,
+        beneficial, advantageous and so on. The bottom line is to help the readers
+        experience hope, knowing that their problem can still be\u00a0solved.</p>\n<h4><strong>Step
+        #4: Use headline\u00a0formulas</strong></h4>\n<p>What makes a headline good
+        is it\u2019s a formula. Every content marketer has one or more formulas for
+        writing headlines. When using formulas, make sure to include power words that
+        will get people to buy your product or join your waiting\u00a0list.</p>\n<ul>\n<li>\n<em>\u2018Little
+        known ways\u2019 </em>formula: How many times have you used this formula to
+        write a catchy headline? Discovered that the <em>\u2018little known ways [put
+        your solution here]\u2019</em> formula is typically a social\u00a0magnet.</li>\n<li>\n<em>\u2018Get
+        rid of [problem] once and for all\u2019 </em>formula: Who wouldn\u2019t want
+        to permanently get rid of an annoying problem that they\u2019re faced with
+        on a daily basis? When you write your headlines with this strategy in mind,
+        you\u2019ll captivate your audience from start to finish, because they want
+        to know the secret,\u00a0too.</li>\n</ul>\n<p><a href=\"https://jtway.co/@rbr.jt\"><strong><em>Ruslana</em></strong></a>
+        is a Lead Generation Manager at <a href=\"https://www.jetthoughts.com/\">JetThoughts</a>.
+        Follow her on <a href=\"https://www.linkedin.com/in/ruslana-brykaliuk-970016135/\">LinkedIn</a>.</p>\n<blockquote>If
+        you enjoyed this story, we recommend reading our <a href=\"https://jtway.co/latest\">latest
+        tech stories</a> and <a href=\"https://jtway.co/trending\">trending tech\u00a0stories</a>.</blockquote>\n<img
+        src=\"https://medium.com/_/stat?event=post.clientViewed&amp;referrerSource=full_rss&amp;postId=16d963cf5222\"
+        width=\"1\" height=\"1\"><hr>\n<p><a href=\"https://jtway.co/4-tricks-to-write-catchy-headlines-16d963cf5222\">4
+        Tricks to Write Catchy Headlines</a> was originally published in <a href=\"https://jtway.co/\">JTWay</a>
+        on Medium, where people are continuing the conversation by highlighting and
+        responding to this story.</p>\n","content":"\n<p>How to improve your writing,
+        and create not just a good headline, but a catchy one? No matter what your
+        content type is, and if you\u2019re either writing a small post or an in-depth\u00a0report.</p>\n<p>The
+        headline is the first thing people will see on a page. Copyblogger estimated
+        that 8 out of 10 people read the title. However, the title doesn\u2019t keep
+        them reading through your blog content. With these headline writing tricks,
+        you\u2019ll get attention from readers immediately.</p>\n<p>Let\u2019s get\u00a0started.</p>\n<figure><img
+        alt=\"\" src=\"https://cdn-images-1.medium.com/max/1024/0*uUvrHZ7yZV9m2ynt\"><figcaption>Photo
+        by <a href=\"https://unsplash.com/@austinchan?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText\">Austin
+        Chan</a> on\u00a0<a href=\"https://unsplash.com/s/photos/article?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText\">Unsplash</a></figcaption></figure><h4><strong>Step
+        #1: Use numbers &amp; data in your\u00a0headline</strong></h4>\n<p>Using numbers
+        and data into your headline is an effective way to make your headlines more
+        fascinating to readers. Several research studies have shown that headlines
+        with numbers tend to generate 73% more social shares and engagement.</p>\n<h4><strong>Step
+        #2: Take a unique rationale into\u00a0account</strong></h4>\n<p>Use unique
+        rationales to write great headlines. The word \u201crationale\u201d simply
+        means \u201can underlying reason on why something should be\u00a0done.\u201d</p>\n<p><strong><em>Some
+        of the rationales that you can include in your headlines are: </em></strong>Tips,
+        Reasons, Lessons, Tricks, Ideas, Ways, Principles, Facts, Secrets, Strategies</p>\n<figure><img
+        alt=\"\" src=\"https://cdn-images-1.medium.com/max/661/0*K7m9YMwsMGd51RHC\"></figure><h4><strong>Step
+        #3: Call for attention</strong></h4>\n<p>\u2018Attention\u2019 simply means
+        mental focus and serious concentration on a given task. How to get it? Here
+        are 4 rules to\u00a0follow:</p>\n<ul><li>Make the headline\u00a0<strong>unique</strong>\n</li></ul>\n<p>\u2018Unique\u2019
+        means being one of a kind. In other words, your headline has to be different
+        from others. But, how do you test for uniqueness?</p>\n<p><em>Simple tip:</em>
+        plug it into Google and enclose the headline in double quotation marks.</p>\n<ul><li>Be
+        <strong>ultra-specific</strong>\n</li></ul>\n<p>Your prospects have questions
+        and they want answers. If you can provide them with an ultra-specific headline
+        and the answer to their questions, you will convert them into loyal readers
+        and customers. The more precise you are, the more authority you\u2019ll gain
+        in your industry.</p>\n<ul><li>It should convey a sense of\u00a0<strong>urgency</strong>\n</li></ul>\n<p>Urgency-based
+        headlines will always grab attention because it makes the reader anticipate
+        what comes next. They don\u2019t want to miss out on what\u2019s on the other
+        side of the headline, once it\u2019s\u00a0clicked.</p>\n<ul><li>Your headline
+        has to be\u00a0<strong>useful</strong>\n</li></ul>\n<p>Useful can mean several
+        things\u200a\u2014\u200apractical, helpful, valuable, informative, worthwhile,
+        beneficial, advantageous and so on. The bottom line is to help the readers
+        experience hope, knowing that their problem can still be\u00a0solved.</p>\n<h4><strong>Step
+        #4: Use headline\u00a0formulas</strong></h4>\n<p>What makes a headline good
+        is it\u2019s a formula. Every content marketer has one or more formulas for
+        writing headlines. When using formulas, make sure to include power words that
+        will get people to buy your product or join your waiting\u00a0list.</p>\n<ul>\n<li>\n<em>\u2018Little
+        known ways\u2019 </em>formula: How many times have you used this formula to
+        write a catchy headline? Discovered that the <em>\u2018little known ways [put
+        your solution here]\u2019</em> formula is typically a social\u00a0magnet.</li>\n<li>\n<em>\u2018Get
+        rid of [problem] once and for all\u2019 </em>formula: Who wouldn\u2019t want
+        to permanently get rid of an annoying problem that they\u2019re faced with
+        on a daily basis? When you write your headlines with this strategy in mind,
+        you\u2019ll captivate your audience from start to finish, because they want
+        to know the secret,\u00a0too.</li>\n</ul>\n<p><a href=\"https://jtway.co/@rbr.jt\"><strong><em>Ruslana</em></strong></a>
+        is a Lead Generation Manager at <a href=\"https://www.jetthoughts.com/\">JetThoughts</a>.
+        Follow her on <a href=\"https://www.linkedin.com/in/ruslana-brykaliuk-970016135/\">LinkedIn</a>.</p>\n<blockquote>If
+        you enjoyed this story, we recommend reading our <a href=\"https://jtway.co/latest\">latest
+        tech stories</a> and <a href=\"https://jtway.co/trending\">trending tech\u00a0stories</a>.</blockquote>\n<img
+        src=\"https://medium.com/_/stat?event=post.clientViewed&amp;referrerSource=full_rss&amp;postId=16d963cf5222\"
+        width=\"1\" height=\"1\"><hr>\n<p><a href=\"https://jtway.co/4-tricks-to-write-catchy-headlines-16d963cf5222\">4
+        Tricks to Write Catchy Headlines</a> was originally published in <a href=\"https://jtway.co/\">JTWay</a>
+        on Medium, where people are continuing the conversation by highlighting and
+        responding to this story.</p>\n","enclosure":{},"categories":["blogging","writing","content-marketing","headlines"]},{"title":"Tips
+        to attract readers to read your post","pubDate":"2019-12-14 11:53:23","link":"https://jtway.co/tips-to-attract-readers-to-read-your-post-e693dfcdbeb8?source=rss-c55e7783810f------2","guid":"https://medium.com/p/e693dfcdbeb8","author":"JetThoughts","thumbnail":"https://cdn-images-1.medium.com/max/1024/1*FjUJw3CQtW26CRXtzsxIVg.jpeg","description":"\n<p>Do
+        you know how to keep readers\u2019 attention? We had been experimenting with
+        different ways to make articles more attractive until we found and checked
+        the best steps to do it. Let\u2019s\u00a0read!</p>\n<p>So, your content should
+        be Scannable! In other words, short and understandable from the very beginning
+        till the end. Sentences and paragraphs are brief. Bold text and bullet points
+        highlight key\u00a0points.</p>\n<p>It\u2019s specifically used to streamline
+        the way readers absorb information to keep them interested. Most people read
+        online by scanning the page for individual words, phrases, or headings.</p>\n<h3>So
+        how do you know if your content is scannable enough?</h3>\n<p>You can use
+        an online application (ex. <a href=\"https://www.crazyegg.com/\"><em>Crazy
+        Egg</em></a>) that provides you with eye-tracking tools such as Heat map,
+        Scroll map, Overlay, and Confetti to track a website\u2019s operation. This
+        helps you to understand the scannability of your headlines and subheadlines
+        (and other content).</p>\n<p>Heat mapping can show you where the focus is
+        and where it should be. By adjusting the format of their site, they were able
+        to improve that significantly.</p>\n<figure><img alt=\"\" src=\"https://cdn-images-1.medium.com/max/1024/1*FjUJw3CQtW26CRXtzsxIVg.jpeg\"><figcaption>Photo
+        by <a href=\"https://unsplash.com/@malinstrandvall?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText\">Malin
+        Strandvall</a> on\u00a0<a href=\"https://unsplash.com/s/photos/magazine-article?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText\">Unsplash</a></figcaption></figure><h3>Frontloading</h3>\n<p>The
+        approach of offering the most important information before filling in on the
+        secondary details is called frontloading.</p>\n<p>An effective frontloading
+        distills the most important information for the reader. It helps readers quickly
+        digest the announcement, decision, and when the new procedures go into\u00a0effect.</p>\n<h3>The
+        structure of the\u00a0article</h3>\n<ul>\n<li>Header</li>\n<li>Introduction</li>\n<li>3
+        Sub-headers</li>\n<li>Conclusion</li>\n</ul>\n<h3>Sub-heads</h3>\n<p>Headlines
+        and sub-heads are the first things that people see. You probably know the
+        80/20 headline rule. It states that 80% of the readers just read the post
+        title. For every 8 people that read a headline, only 2 read the\u00a0post.</p>\n<p>So,
+        large, Bold words that act as visual suggestions of what is happening in the
+        content are effective ways of drawing readers further into articles.</p>\n<h3>Text
+        styles</h3>\n<p>Use bold, CAPITALS, italics, underlining, Teletext, and to
+        emphasize points. Don\u2019t go overboard as you run the risk of frustrating
+        your reader. Also, consider changing font size, color, and style to draw your
+        reader\u2019s eyes to your main\u00a0points.</p>\n<h3>List</h3>\n<p>Making
+        a list helps your content succeed because it is more acceptable for social
+        media. The key is creating a great list that gives you extra help in terms
+        of presentation and connecting with your\u00a0readers.</p>\n<p>Also, with
+        listicles, you don\u2019t even have to read every paragraph. You know what
+        the topic is. You can just read the headings and get what each item is\u00a0about.</p>\n<h3>Pictures</h3>\n<p>You\u2019ve
+        spent all this time on creating articles with catchy headlines, and you want
+        your posts to shine. The best way to do this is a great visual. Research shows
+        that the reader\u2019s eyes are drawn down the page by pictures. The first
+        image your audience will see when they come to your page is your featured\u00a0image.</p>\n<p>You
+        can find attractive images from stock sites (ex. <a href=\"https://unsplash.com/\">https://unsplash.com/</a>)
+        as I do. Place them cleverly by your key points (especially when they closely
+        relate to the content), and you have more of a chance of getting readers to
+        read full articles.</p>\n<figure><img alt=\"\" src=\"https://cdn-images-1.medium.com/max/1024/0*N0KbmVcuMaK_hgah\"><figcaption>Photo
+        by <a href=\"https://unsplash.com/@bramnaus?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText\">Bram
+        Naus</a> on\u00a0<a href=\"https://unsplash.com/s/photos/unsplash-laptop?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText\">Unsplash</a></figcaption></figure><h3>Space
+        it\u00a0up</h3>\n<p>Don\u2019t feel you have to fill up every inch of your
+        screen\u200a\u2014\u200ainstead, create spaces because they help to read the
+        important information without a feeling of overwhelming.</p>\n<p><a href=\"https://jtway.co/@rbr.jt\"><strong><em>Ruslana</em></strong></a>
+        is a Lead Generation Manager at <a href=\"https://www.jetthoughts.com/\">JetThoughts</a>.
+        Follow her on <a href=\"https://www.linkedin.com/in/ruslana-brykaliuk-970016135/\">LinkedIn</a>.</p>\n<blockquote>If
+        you enjoyed this story, we recommend reading our <a href=\"https://jtway.co/latest\">latest
+        tech stories</a> and <a href=\"https://jtway.co/trending\">trending tech\u00a0stories</a>.</blockquote>\n<img
+        src=\"https://medium.com/_/stat?event=post.clientViewed&amp;referrerSource=full_rss&amp;postId=e693dfcdbeb8\"
+        width=\"1\" height=\"1\"><hr>\n<p><a href=\"https://jtway.co/tips-to-attract-readers-to-read-your-post-e693dfcdbeb8\">Tips
+        to attract readers to read your post</a> was originally published in <a href=\"https://jtway.co/\">JTWay</a>
+        on Medium, where people are continuing the conversation by highlighting and
+        responding to this story.</p>\n","content":"\n<p>Do you know how to keep readers\u2019
+        attention? We had been experimenting with different ways to make articles
+        more attractive until we found and checked the best steps to do it. Let\u2019s\u00a0read!</p>\n<p>So,
+        your content should be Scannable! In other words, short and understandable
+        from the very beginning till the end. Sentences and paragraphs are brief.
+        Bold text and bullet points highlight key\u00a0points.</p>\n<p>It\u2019s specifically
+        used to streamline the way readers absorb information to keep them interested.
+        Most people read online by scanning the page for individual words, phrases,
+        or headings.</p>\n<h3>So how do you know if your content is scannable enough?</h3>\n<p>You
+        can use an online application (ex. <a href=\"https://www.crazyegg.com/\"><em>Crazy
+        Egg</em></a>) that provides you with eye-tracking tools such as Heat map,
+        Scroll map, Overlay, and Confetti to track a website\u2019s operation. This
+        helps you to understand the scannability of your headlines and subheadlines
+        (and other content).</p>\n<p>Heat mapping can show you where the focus is
+        and where it should be. By adjusting the format of their site, they were able
+        to improve that significantly.</p>\n<figure><img alt=\"\" src=\"https://cdn-images-1.medium.com/max/1024/1*FjUJw3CQtW26CRXtzsxIVg.jpeg\"><figcaption>Photo
+        by <a href=\"https://unsplash.com/@malinstrandvall?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText\">Malin
+        Strandvall</a> on\u00a0<a href=\"https://unsplash.com/s/photos/magazine-article?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText\">Unsplash</a></figcaption></figure><h3>Frontloading</h3>\n<p>The
+        approach of offering the most important information before filling in on the
+        secondary details is called frontloading.</p>\n<p>An effective frontloading
+        distills the most important information for the reader. It helps readers quickly
+        digest the announcement, decision, and when the new procedures go into\u00a0effect.</p>\n<h3>The
+        structure of the\u00a0article</h3>\n<ul>\n<li>Header</li>\n<li>Introduction</li>\n<li>3
+        Sub-headers</li>\n<li>Conclusion</li>\n</ul>\n<h3>Sub-heads</h3>\n<p>Headlines
+        and sub-heads are the first things that people see. You probably know the
+        80/20 headline rule. It states that 80% of the readers just read the post
+        title. For every 8 people that read a headline, only 2 read the\u00a0post.</p>\n<p>So,
+        large, Bold words that act as visual suggestions of what is happening in the
+        content are effective ways of drawing readers further into articles.</p>\n<h3>Text
+        styles</h3>\n<p>Use bold, CAPITALS, italics, underlining, Teletext, and to
+        emphasize points. Don\u2019t go overboard as you run the risk of frustrating
+        your reader. Also, consider changing font size, color, and style to draw your
+        reader\u2019s eyes to your main\u00a0points.</p>\n<h3>List</h3>\n<p>Making
+        a list helps your content succeed because it is more acceptable for social
+        media. The key is creating a great list that gives you extra help in terms
+        of presentation and connecting with your\u00a0readers.</p>\n<p>Also, with
+        listicles, you don\u2019t even have to read every paragraph. You know what
+        the topic is. You can just read the headings and get what each item is\u00a0about.</p>\n<h3>Pictures</h3>\n<p>You\u2019ve
+        spent all this time on creating articles with catchy headlines, and you want
+        your posts to shine. The best way to do this is a great visual. Research shows
+        that the reader\u2019s eyes are drawn down the page by pictures. The first
+        image your audience will see when they come to your page is your featured\u00a0image.</p>\n<p>You
+        can find attractive images from stock sites (ex. <a href=\"https://unsplash.com/\">https://unsplash.com/</a>)
+        as I do. Place them cleverly by your key points (especially when they closely
+        relate to the content), and you have more of a chance of getting readers to
+        read full articles.</p>\n<figure><img alt=\"\" src=\"https://cdn-images-1.medium.com/max/1024/0*N0KbmVcuMaK_hgah\"><figcaption>Photo
+        by <a href=\"https://unsplash.com/@bramnaus?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText\">Bram
+        Naus</a> on\u00a0<a href=\"https://unsplash.com/s/photos/unsplash-laptop?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText\">Unsplash</a></figcaption></figure><h3>Space
+        it\u00a0up</h3>\n<p>Don\u2019t feel you have to fill up every inch of your
+        screen\u200a\u2014\u200ainstead, create spaces because they help to read the
+        important information without a feeling of overwhelming.</p>\n<p><a href=\"https://jtway.co/@rbr.jt\"><strong><em>Ruslana</em></strong></a>
+        is a Lead Generation Manager at <a href=\"https://www.jetthoughts.com/\">JetThoughts</a>.
+        Follow her on <a href=\"https://www.linkedin.com/in/ruslana-brykaliuk-970016135/\">LinkedIn</a>.</p>\n<blockquote>If
+        you enjoyed this story, we recommend reading our <a href=\"https://jtway.co/latest\">latest
+        tech stories</a> and <a href=\"https://jtway.co/trending\">trending tech\u00a0stories</a>.</blockquote>\n<img
+        src=\"https://medium.com/_/stat?event=post.clientViewed&amp;referrerSource=full_rss&amp;postId=e693dfcdbeb8\"
+        width=\"1\" height=\"1\"><hr>\n<p><a href=\"https://jtway.co/tips-to-attract-readers-to-read-your-post-e693dfcdbeb8\">Tips
+        to attract readers to read your post</a> was originally published in <a href=\"https://jtway.co/\">JTWay</a>
+        on Medium, where people are continuing the conversation by highlighting and
+        responding to this story.</p>\n","enclosure":{},"categories":["tips","blogging","writing","article-writing"]},{"title":"Best
+        tips for writing integration tests in Rails","pubDate":"2019-12-02 22:31:54","link":"https://jtway.co/best-tips-for-writing-integration-tests-in-rails-d1f56081f249?source=rss-c55e7783810f------2","guid":"https://medium.com/p/d1f56081f249","author":"JetThoughts","thumbnail":"https://cdn-images-1.medium.com/max/1024/0*6-i2S6NgYxpEyJHS.jpg","description":"\n<h3>Tips
+        for writing readable system tests in\u00a0Rails</h3>\n<blockquote>Want to
+        make system tests easy to main tain? We have selected some best practice tips
+        to help achieve\u00a0this.</blockquote>\n<figure><img alt=\"\" src=\"https://cdn-images-1.medium.com/max/1024/0*6-i2S6NgYxpEyJHS.jpg\"></figure><h3>Organize
+        tests in four\u00a0phases</h3>\n<p>The <a href=\"http://xunitpatterns.com/Four%20Phase%20Test.html\">Four-Phase
+        Test</a> is a testing pattern, applicable to all programming languages and
+        unit tests (not so much integration tests).</p>\n<p>There are four distinct
+        phases of the test. They are executed sequentially.</p>\n<pre>test do<br>  setup<br>  exercise<br>  verify<br>  teardown<br>end</pre>\n<h4>setup</h4>\n<p>During
+        setup, setup initial\u00a0state.</p>\n<pre>user = User.new(password: ''password'')</pre>\n<h4>exercise</h4>\n<p>At
+        this stage, run/execute a tested scenario.</p>\n<pre>user.save</pre>\n<h4>verify</h4>\n<p>Here,
+        the result of the exercise is verified against the developer\u2019s expectations.</p>\n<pre>user.encrypted_password.should_not
+        be_nil</pre>\n<h4>teardown</h4>\n<p>During the teardown, the system under
+        test is reset to its pre-setup state.</p>\n<h3>Maintain a single level of
+        abstraction</h3>\n<p>Each acceptance test tells a story: a logical progression
+        through a task within an application. As developers, it\u2019s our responsibility
+        to tell each story in a concise manner and to keep the reader (either other
+        developers or our future selves) engaged, aware of what is happening, and
+        understanding the purpose of the\u00a0story.</p>\n<p>At the heart of understanding
+        the story being told is a consistent, single level of abstraction; that is,
+        each piece of behavior is roughly similar in terms of functionality extracted
+        and its overall\u00a0purpose.</p>\n<p>Let\u2019s first focus on an example
+        of how <em>not</em> to write an acceptance test by writing a test at multiple
+        levels of abstraction:</p>\n<a href=\"https://medium.com/media/af7d82617bbdbbb49c9c09bda7f0565f/href\">https://medium.com/media/af7d82617bbdbbb49c9c09bda7f0565f/href</a><p>Let\u2019s
+        now look at a scenario written at a single level of abstraction:</p>\n<a href=\"https://medium.com/media/3ec9347642e24c07c57297306beabc1e/href\">https://medium.com/media/3ec9347642e24c07c57297306beabc1e/href</a><p>This
+        spec follows the <a href=\"http://c2.com/ppr/wiki/WikiPagesAboutRefactoring/ComposedMethod.html\">Composed
+        Method pattern</a>, discussed in <a href=\"http://www.amazon.com/Smalltalk-Best-Practice-Patterns-Kent/dp/013476904X\">Smalltalk
+        Best Practice Patterns</a>, wherein each piece of functionality is extracted
+        to well-named methods. Each method should be written at a single level of
+        abstraction.</p>\n<p>Maintaining a single level of abstraction is a tool in
+        every developer\u2019s arsenal to help achieve clear, understandable tests.
+        By extracting behavior to well-named methods, the developer can better tell
+        the story of each scenario by describing behaviors consistently and at a high
+        enough level that others will understand the goal and outcomes of the\u00a0test.</p>\n<h3>Be
+        explicit about\u00a0naming</h3>\n<p>Some main rules related to\u00a0naming:</p>\n<ul>\n<li>Use
+        regular text, when describing features and everything else, i.e. user change
+        to predefined date\u00a0range</li>\n<li>Use actual class names, when describing
+        classes or test name, i.e. UserSelectDimensionMetricTest</li>\n<li>Use unique
+        data-attribute for testing, i.e. test-id=\"dimension-list\"</li>\n</ul>\n<h3>Guidelines
+        about organization</h3>\n<p>There are three major blocks dedicated to documenting
+        our\u00a0tests:</p>\n<ol>\n<li>describe helps us to define our subject\u200a\u2014\u200ausually
+        top-level describe is either a feature name or a class name, while lower-level
+        describe defining methods, constants, etc.</li>\n<li>context should clearly
+        describe\u2026 context (or environment) in which our assertions will be verified.
+        Each context should describe only one aspect of the environment and we should
+        refrain from including contexts in expectations.</li>\n<li>And it.The good
+        practice is to use present simple tense to describe expectations and keep
+        those expectations concise, precise and unambiguous.</li>\n</ol>\n<h3>Set
+        up only relevant information</h3>\n<p>To facilitate the process between the
+        test setup and the assertions easier, it may be useful to be as clear as possible
+        about\u00a0data.</p>\n<ul>\n<li>Use more or less real values in the context,
+        i.e. assigning a user name of user_1 isn\u2019t a good\u00a0idea.</li>\n<li>Irrelevant
+        information is another cause of obscure tests. expect(page.title).to eq(dimensions[:title]
+        will be clearer expect(page.title).to eq(''Date'').</li>\n<li>Limit the use
+        of local variables, and just use explicit (yes, duplicated) values directly.</li>\n<li>Don\u2019t
+        use fixtures. Fixtures, usually stored in separate files, hide important context
+        of spec, necessary to understand it to the fullest\u00a0extent.</li>\n</ul>\n<h3>Follow
+        the tips or\u00a0not?</h3>\n<p>Writing readability system tests does some
+        cost, such as code duplication and more restrictions on compiling tests.<br>However,
+        you are increasing the enjoyment of system tests because your tests become
+        readable and easy to maintain.<br>Follow the tips or not? It is up to you
+        to\u00a0decide!</p>\n<p><strong>Andriy Parashchuk </strong>is a Software Engineer
+        at <a href=\"https://www.jetthoughts.com/\">JetThoughts</a>. Follow him on
+        <a href=\"https://www.linkedin.com/in/andriy-parashchuk-3aa56468/\">LinkedIn</a>
+        or\u00a0<a href=\"https://github.com/andriyParashchuk\">GitHub</a>.</p>\n<blockquote>\n<em>If
+        you enjoyed this story, we recommend reading our </em><a href=\"https://jtway.co/latest\"><em>latest
+        tech stories</em></a><em> and </em><a href=\"https://jtway.co/trending\"><em>trending
+        tech\u00a0stories</em></a><em>.</em>\n</blockquote>\n<img src=\"https://medium.com/_/stat?event=post.clientViewed&amp;referrerSource=full_rss&amp;postId=d1f56081f249\"
+        width=\"1\" height=\"1\"><hr>\n<p><a href=\"https://jtway.co/best-tips-for-writing-integration-tests-in-rails-d1f56081f249\">Best
+        tips for writing integration tests in Rails</a> was originally published in
+        <a href=\"https://jtway.co/\">JTWay</a> on Medium, where people are continuing
+        the conversation by highlighting and responding to this story.</p>\n","content":"\n<h3>Tips
+        for writing readable system tests in\u00a0Rails</h3>\n<blockquote>Want to
+        make system tests easy to main tain? We have selected some best practice tips
+        to help achieve\u00a0this.</blockquote>\n<figure><img alt=\"\" src=\"https://cdn-images-1.medium.com/max/1024/0*6-i2S6NgYxpEyJHS.jpg\"></figure><h3>Organize
+        tests in four\u00a0phases</h3>\n<p>The <a href=\"http://xunitpatterns.com/Four%20Phase%20Test.html\">Four-Phase
+        Test</a> is a testing pattern, applicable to all programming languages and
+        unit tests (not so much integration tests).</p>\n<p>There are four distinct
+        phases of the test. They are executed sequentially.</p>\n<pre>test do<br>  setup<br>  exercise<br>  verify<br>  teardown<br>end</pre>\n<h4>setup</h4>\n<p>During
+        setup, setup initial\u00a0state.</p>\n<pre>user = User.new(password: ''password'')</pre>\n<h4>exercise</h4>\n<p>At
+        this stage, run/execute a tested scenario.</p>\n<pre>user.save</pre>\n<h4>verify</h4>\n<p>Here,
+        the result of the exercise is verified against the developer\u2019s expectations.</p>\n<pre>user.encrypted_password.should_not
+        be_nil</pre>\n<h4>teardown</h4>\n<p>During the teardown, the system under
+        test is reset to its pre-setup state.</p>\n<h3>Maintain a single level of
+        abstraction</h3>\n<p>Each acceptance test tells a story: a logical progression
+        through a task within an application. As developers, it\u2019s our responsibility
+        to tell each story in a concise manner and to keep the reader (either other
+        developers or our future selves) engaged, aware of what is happening, and
+        understanding the purpose of the\u00a0story.</p>\n<p>At the heart of understanding
+        the story being told is a consistent, single level of abstraction; that is,
+        each piece of behavior is roughly similar in terms of functionality extracted
+        and its overall\u00a0purpose.</p>\n<p>Let\u2019s first focus on an example
+        of how <em>not</em> to write an acceptance test by writing a test at multiple
+        levels of abstraction:</p>\n<a href=\"https://medium.com/media/af7d82617bbdbbb49c9c09bda7f0565f/href\">https://medium.com/media/af7d82617bbdbbb49c9c09bda7f0565f/href</a><p>Let\u2019s
+        now look at a scenario written at a single level of abstraction:</p>\n<a href=\"https://medium.com/media/3ec9347642e24c07c57297306beabc1e/href\">https://medium.com/media/3ec9347642e24c07c57297306beabc1e/href</a><p>This
+        spec follows the <a href=\"http://c2.com/ppr/wiki/WikiPagesAboutRefactoring/ComposedMethod.html\">Composed
+        Method pattern</a>, discussed in <a href=\"http://www.amazon.com/Smalltalk-Best-Practice-Patterns-Kent/dp/013476904X\">Smalltalk
+        Best Practice Patterns</a>, wherein each piece of functionality is extracted
+        to well-named methods. Each method should be written at a single level of
+        abstraction.</p>\n<p>Maintaining a single level of abstraction is a tool in
+        every developer\u2019s arsenal to help achieve clear, understandable tests.
+        By extracting behavior to well-named methods, the developer can better tell
+        the story of each scenario by describing behaviors consistently and at a high
+        enough level that others will understand the goal and outcomes of the\u00a0test.</p>\n<h3>Be
+        explicit about\u00a0naming</h3>\n<p>Some main rules related to\u00a0naming:</p>\n<ul>\n<li>Use
+        regular text, when describing features and everything else, i.e. user change
+        to predefined date\u00a0range</li>\n<li>Use actual class names, when describing
+        classes or test name, i.e. UserSelectDimensionMetricTest</li>\n<li>Use unique
+        data-attribute for testing, i.e. test-id=\"dimension-list\"</li>\n</ul>\n<h3>Guidelines
+        about organization</h3>\n<p>There are three major blocks dedicated to documenting
+        our\u00a0tests:</p>\n<ol>\n<li>describe helps us to define our subject\u200a\u2014\u200ausually
+        top-level describe is either a feature name or a class name, while lower-level
+        describe defining methods, constants, etc.</li>\n<li>context should clearly
+        describe\u2026 context (or environment) in which our assertions will be verified.
+        Each context should describe only one aspect of the environment and we should
+        refrain from including contexts in expectations.</li>\n<li>And it.The good
+        practice is to use present simple tense to describe expectations and keep
+        those expectations concise, precise and unambiguous.</li>\n</ol>\n<h3>Set
+        up only relevant information</h3>\n<p>To facilitate the process between the
+        test setup and the assertions easier, it may be useful to be as clear as possible
+        about\u00a0data.</p>\n<ul>\n<li>Use more or less real values in the context,
+        i.e. assigning a user name of user_1 isn\u2019t a good\u00a0idea.</li>\n<li>Irrelevant
+        information is another cause of obscure tests. expect(page.title).to eq(dimensions[:title]
+        will be clearer expect(page.title).to eq(''Date'').</li>\n<li>Limit the use
+        of local variables, and just use explicit (yes, duplicated) values directly.</li>\n<li>Don\u2019t
+        use fixtures. Fixtures, usually stored in separate files, hide important context
+        of spec, necessary to understand it to the fullest\u00a0extent.</li>\n</ul>\n<h3>Follow
+        the tips or\u00a0not?</h3>\n<p>Writing readability system tests does some
+        cost, such as code duplication and more restrictions on compiling tests.<br>However,
+        you are increasing the enjoyment of system tests because your tests become
+        readable and easy to maintain.<br>Follow the tips or not? It is up to you
+        to\u00a0decide!</p>\n<p><strong>Andriy Parashchuk </strong>is a Software Engineer
+        at <a href=\"https://www.jetthoughts.com/\">JetThoughts</a>. Follow him on
+        <a href=\"https://www.linkedin.com/in/andriy-parashchuk-3aa56468/\">LinkedIn</a>
+        or\u00a0<a href=\"https://github.com/andriyParashchuk\">GitHub</a>.</p>\n<blockquote>\n<em>If
+        you enjoyed this story, we recommend reading our </em><a href=\"https://jtway.co/latest\"><em>latest
+        tech stories</em></a><em> and </em><a href=\"https://jtway.co/trending\"><em>trending
+        tech\u00a0stories</em></a><em>.</em>\n</blockquote>\n<img src=\"https://medium.com/_/stat?event=post.clientViewed&amp;referrerSource=full_rss&amp;postId=d1f56081f249\"
+        width=\"1\" height=\"1\"><hr>\n<p><a href=\"https://jtway.co/best-tips-for-writing-integration-tests-in-rails-d1f56081f249\">Best
+        tips for writing integration tests in Rails</a> was originally published in
+        <a href=\"https://jtway.co/\">JTWay</a> on Medium, where people are continuing
+        the conversation by highlighting and responding to this story.</p>\n","enclosure":{},"categories":["system-test","testing","ruby","rails","capybara"]}]}'
+    http_version: 
+  recorded_at: Mon, 13 Apr 2020 14:00:07 GMT
+recorded_with: VCR 5.0.0
