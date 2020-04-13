@@ -1,11 +1,11 @@
 # frozen_string_literal: true
 
-require 'posts_source/medium'
+require 'posts_source/remote'
 
 class Medium
   cattr_accessor :source
 
-  self.source = PostsSource::Medium
+  self.source = PostsSource::Remote
 
   def initialize(name = nil)
     @client = source.new(name)
